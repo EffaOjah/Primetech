@@ -4815,7 +4815,7 @@ form .btn-lg {
 .table tr td,
 .table tr th {
   font-weight: 400;
-  color: white !important;
+  color: grey !important;
 }
 .table thead tr td,
 .table thead tr th {

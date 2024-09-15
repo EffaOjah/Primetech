@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime-tech || Coupon code Info</title>
-    <link rel="shortcut icon" type="image/png" href="img/logo (3).png">
+    <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
     <!-- Style CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
   <style>
     .flex-right {
@@ -27,7 +27,7 @@
     }
   </style>
 </head>
-<body class="bg-light">
+<body class="bg-white">
     <div class="flex-right">
         <!-- Header Area -->
         <div class="col-12 header-area" style="top: 0;">
@@ -36,8 +36,8 @@
                 <!-- Logo Wrapper -->
                 <div class="logo-wrapper">
                     <a href="/">
-                        <img src="img/Vertex-09-copy.png" class="dark-img" alt="">
-                        <img src="img/Vertex-08-copy.png" class="light-img" alt="" style="display: none;">
+                        <img src="/img/logo (3).png" class="dark-img" alt="">
+                        <img src="/img/logo (3).png" class="light-img" alt="" style="display: none;">
                     </a>
                 </div>
             </div>
@@ -48,32 +48,40 @@
         <div class="container">
             <table class="table table-bordered table-responsive table-hover">
                 <thead>
+                    <div class="bg-light">
+                        <img src="/img/logo (3).png" class="dark-img" alt="logo" style="filter: drop-shadow(0px 12px 12px);">
+                    </div>
+                    
                     <h1 class="fw-bold mb-4">Coupon Code Info</h1>
                 </thead>
+                <% if (coupon.length < 1) { %>
+                 <h2>Invalid Coupon code</h2>
+                <% } else{ %>
                 <tbody>
                     <tr>
                         <th>Coupon</th>
-                        <td>ADM32hi32uki2d</td>
+                        <td><%= coupon[0].token %></td>
                     </tr>
                     <tr>
                         <th>Status</th>
-                        <td>Used</td>
+                        <td><%= coupon[0].is_used == 0 ? 'ACTIVE' : 'USED' %></td>
                     </tr>
                     <tr>
                         <th>Used By</th>
-                        <td>Larry O</td>
+                        <td><%= coupon[0].username == null ? 'NULL' : coupon[0].username %></td>
                     </tr>
                     <tr>
                         <th>Date Used</th>
-                        <td>2024-03-14</td>
+                        <td><%= coupon[0].date_used == null ? 'NULL' : coupon[0].date_used %></td>
                     </tr>
                 </tbody>
+                <% } %>
             </table>
         </div><br>
         <p>Take me back to <a href="/" class="link-warning">home</a>.</p>
     </div>
     
     
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

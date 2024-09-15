@@ -41,27 +41,24 @@
                   
                   <div class="form-group text-start mb-1 position-relative">
                     <div class="form-floating">
-                    <input class="form-control py-2" type="text" autocomplete="off" name="bank" value="<%= user.bank_name %>" required="">
-                    <label>Bank Name</label>
+                    <input class="form-control py-2" type="text" autocomplete="off" name="bank" placeholder="Bank Name" value="<%= user.bank_name %>" required="" readonly>
                   </div>
                   </div>
     
                   <div class="form-group text-start mb-1 position-relative">
                     <div class="form-floating">
-                    <input class="form-control py-2" type="text" autocomplete="off" name="accountName" value="<%= user.account_name %>" required="">
-                    <label>Account Name</label>
+                    <input class="form-control py-2" type="text" autocomplete="off" name="accountName" placeholder="Account Name" value="<%= user.account_name %>" required="" readonly>
                   </div>
                   </div>
                 
                   <div class="form-group text-start mb-1 position-relative">
                     <div class="form-floating">
-                    <input class="form-control py-2" type="text" autocomplete="off" name="accountNumber" value="<%= user.account_number %>" required="">
-                    <label>Account Number</label>
+                    <input class="form-control py-2" type="text" autocomplete="off" name="accountNumber" placeholder="Account Number" value="<%= user.account_number %>" required="" readonly>
                   </div>
                   </div>
                   
                   <div class="form-group text-start mb-1 position-relative">
-                    <input class="form-control py-2" type="number" autocomplete="off" name="withdrawalPin" placeholder="withdrawal pin" value="" maxlength="4" required="">
+                    <input class="form-control py-2" type="password" autocomplete="off" name="withdrawalPin" placeholder="withdrawal pin" value="" maxlength="4" required="">
                   </div>
 
                   <div class="col-md-12">

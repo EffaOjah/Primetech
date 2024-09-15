@@ -413,13 +413,13 @@ router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
             // Ensure that affiliate withdrawal is 8000 and above
             if ((amount * 1000) < 8000) {
                 console.log('Affiliate withdrawal must be $8 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Affiliate withdrawal must be $10 or above', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Affiliate withdrawal must be $8 or above', alertColor: 'red'});
             }
 
             // Check if user balance is up to 8000
             if (getTotalAffiliateBalanceView[0].affiliateBalance < 8000) {
-                console.log('Your affiliate balance must be $10 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your affiliate balance must be $10 or above', alertColor: 'red'});
+                console.log('Your affiliate balance must be $8 or above');
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your affiliate balance must be $8 or above', alertColor: 'red'});
             }
 
             // Ensure that withdrawal affiliate amount is not more than user's balance

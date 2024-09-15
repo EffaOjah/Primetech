@@ -2,6 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
+const connection = require('../db/db');
+
 // Home route
 router.get('/', (req, res)=>{
     res.render('Home');
@@ -15,6 +17,23 @@ router.get('/couponcode/purchase', (req, res)=>{
 // Verify coupon code route
 router.get('/couponcode/verify', (req, res)=>{
     res.render('Verify Coupon Code');
+});
+
+// Verify coupon code result
+router.post('/couponcode/info', (req, res)=>{
+    const coupon = req.body.coupon;
+
+    // Check if the coupon is valid
+    connection.query('SELECT * FROM users INNER JOIN registeration_tokens ON users.user_id = registeration_tokens.user_id WHERE token = ?', coupon, (err, result)=>{
+        if (err) {
+            console.log(err);
+            
+        } else{
+            console.log('Coupon Info: ', result);
+
+            res.render('Verify Coupon Result', {coupon: result});
+        }
+    });
 });
 
 // Top earners route
