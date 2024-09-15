@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://www.Prime-tech.net/about -->
+<html lang="en" data-bs-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta-->
+    <meta property="og:title" content="<%= post.length < 1 ? '' : post[0].post_title %>">
+<meta property="og:description" content="<%= post.length < 1 ? '' : post[0].post_description %>">
+<meta property="og:image" content="uploads/admin/<%= post.length < 1 ? '' : post[0].post_image %>">
+<meta property="og:url" content="https://primetech.net.ng/post/<%= post[0].post_id %><%= post.length < 1 ? '' : post[0].post_id %>">
+    <!--title-->
+    <title> Prime-tech || Post Detail</title>
+    <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+
+    <!--build:css-->
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles2.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+     <!-- endbuild -->
+
+     <style>
+        .text-color{
+            color: #096404  !important;
+        }
+     </style>
+</head>
+
+<body>
+
+    <!--scrolltop button -->
+    <a href="#top"><button class="scrolltop-btn"><i class="fa-solid fa-angle-up"></i></button></a>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> -->
+
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="/" class="logo-wrapper"><img src="/img/logo (3).png" style="height: 70px; width: 80px;" alt="logo" class="logo logo-black"></a>
+            <p class="fw-bold position-relative mt-3" style="color: #07DE0A;">PRIME-TECH</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+                
+            <%- include('./partials/viewPagesMobileNav') %>
+        </div>
+    </div>
+
+    
+    <%- include('./partials/viewPagesHeader') %>
+
+
+    <div class="container mt-3">
+        <h2>Post Detail</h2>
+        <hr>
+        <br>
+        <div class="row g-5">
+            <div class="col-xl-8">
+                <div class="hm-blog-grid-left">
+                    <div class="row g-4">
+                        
+                       <h3 style="text-align: center; color: white;">No post</h3>                     
+                                                        
+                        <div class="col-md-8">
+                            <% if (post.length < 1) { %>
+                                <h2>Post not found</h2>
+                            <% } else { %>
+                                <div class="hm2-blog-card bg-light deep-shadow rounded">
+                                    <div class="feature-img rounded-top overflow-hidden">
+                                        <img src="/uploads/admin/<%= post[0].post_image %>" alt="feature" class="img-fluid">
+                                    </div>
+                                    <div class="hm2-blog-card-content position-relative p-3">
+                                        <span class="h4 post-title text-color"><%= post[0].post_title %></span>
+                                        <br>
+                                        <p class="mt-2">
+                                            <%= post[0].post_description %>
+                                        </p>
+                                        <div class="d-inline-flex align-items-center">
+                                            <h6 class="ms-2 mb-0">~ADMIN</h6>
+                                        </div>
+                                        <hr class="spacer mt-20 mb-20">
+                                        <p>Share Post</p>
+                                        <div class="bog-author d-flex align-items-center justify-content-between">
+                                            <span class="date"><div>
+                                                <div id="share-icons" class="p-2">
+                                                    <a onclick="sharePost()">
+                                     <i class="fa-brands fa-square-whatsapp fs-1" style="color: #075e54"></i>
+                                     </a>
+                                 <a onclick="sharePost()" href="https://web.facebook.com/sharer/sharer.php?u=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
+                                <i class="fa-brands fa-facebook ms-3 fs-1" style="color: blue"></i>
+                            </a>
+
+                                                   <a onclick="sharePost()" href="https://twitter.com/intent/tweet?url=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
+                                                   <i class="fa-brands fa-square-twitter  ms-3  fs-1" style="color: #1DA1F2"></i>
+                                                   </a>
+                                                   </div>
+                                                </div></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <% } %>
+                        </div>
+                                                  
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+ <%- include('./partials/viewPagesFooter') %>
+
+
+     <!--build:js-->
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/js/script.js"></script> -->
+
+    <!--endbuild-->
+    <script>
+        function joinPlatform() {
+            fetch('/join-platform')
+        }
+        function sharePost() {
+            fetch('/share-post');
+        }
+        
+     </script>
+</body>
+</html>

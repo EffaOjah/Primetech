@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://Prime-tech.net/user/submit-withdraw -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime-tech">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  
+  <!-- Title -->
+  <title> Prime-tech || Submit Withdrawal</title>
+  <link rel="shortcut icon" type="image/png" href="img/logo (3).png">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="css/toastify.min.css">
+
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-one">
+
+  <div class="d-flex">
+
+    <div class="flex-right more col-12 col-md-11">
+      <!-- Navbar -->
+      <%- include('./partials/dashboardPagesNav') %>
+
+        <div class="overall-div" style="display: flex;">
+            <!-- flex-right inner-left -->
+            <div class="container mt-3">
+
+              <div class="card-width bg-gray radius-three shadows">
+                <div class="card-body px-4 py-4">
+                  <div class="card-text">
+                    <p class="text-white fs-4 mb-4"><%= user.bank_name %> | <%= user.account_number %> | <%= user.account_name %></p>
+                  </div>
+                  <a class="btn btn-color text-white radius-two px-3 py-2" href="/update/bank-details">Edit details</a>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="px-3 pt-2">
+                    <h6 class="fw-bold text-white">Place Withdrawal</h6>
+                </div>
+                <div class="card-width p-4">
+                  <form action="/submit-withdrawal" method="post">
+                    <div class="row g-3">
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <select class="form-select" id="type" name="withdrawalType" required="">
+                            <option style="margin-top: -10px !important;">Select Withdrawal Type</option>
+                            
+                            <option id="affiliateBalance" value="affiliate"></option>
+                            
+                            <option id="gameBalance" value="invest"></option>
+                            
+                            <option id="earningsBalance" value="amount"></option>
+                          </select>
+                        </div>  
+                      </div>
+    
+                      <div class="form-group text-start mb-1 position-relative">
+                        <input class="form-control py-2" type="text" autocomplete="off" name="amount" placeholder="Withdrawal Amount" value="" required="">
+                        </div>
+
+                        <div class="form-group text-start mb-1 position-relative">
+                            <input class="form-control py-2" type="password" autocomplete="off" name="pin" placeholder="Withdrawal Pin" value="" maxlength="4" required="">
+                        </div>
+    
+                      <div class="col-md-12">
+                        <button class="btn btn-color text-white w-100 radius-two py-2 shadow" type="submit">Submit Now</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Withdraw</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="bottom-nav">
+        <ul>
+          <li class="active-item mb-3">
+            <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+          </li>
+          <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<!-- Footer Nav -->
+<footer class="shadow dashboard-footer">
+  <div class="d-flex py-2 align-items-center justify-content-around bg-two content">
+    <a href="/user/dashboard">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="home-outline"></ion-icon>
+          <small>Dashboard</small>
+      </div>
+    </a>
+    <a href="/history/withdrawals">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="time-outline"></ion-icon>
+          <small>History</small>
+      </div>
+    </a>
+    <a href="/place-withdrawal">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="card"></ion-icon>
+          <small>Withdraw</small>
+      </div>
+    </a>
+    <button class="btn-more" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="ellipsis-horizontal"></ion-icon>
+          <small>More</small>
+      </div>
+    </button>
+  </div>
+</footer>
+
+<span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+<span id="alertColor" class="d-none"><%= locals.alertColor %></span>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+<!--build:js-->
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<!-- Toastify JS -->
+<script type="text/javascript" src="js/toastify.js"></script>
+
+
+<script src="js/active.js"></script>
+<script src="js/alert.js"></script>
+<!--endbuild-->
+
+<script>
+ const alertMessage = document.getElementById('alertMessage');
+ const alertColor = document.getElementById('alertColor');
+
+   document.addEventListener('DOMContentLoaded', ()=>{
+     if (alertMessage.innerHTML) {
+         myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+     } else {
+       return;
+     }
+     
+   });
+</script>
+<script>
+  //Load balances
+  document.addEventListener('DOMContentLoaded', async ()=>{
+      try {
+        const response = await fetch('/loadBalances');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);    
+       }
+       const data = await response.json();
+
+       console.log(data);
+
+       
+       document.getElementById('affiliateBalance').innerHTML = `Affiliate Balance: $${(data.getTotalAffiliateBalanceView[0].affiliateBalance) / 1000}`;
+
+       document.getElementById('gameBalance').innerHTML = `Game Balance: $${(data.getTotalGameBalanceView
+       [0].gameBalance) / 1000}`;
+
+       document.getElementById('earningsBalance').innerHTML = `Activities Balance: $${(data.getTotalNonAffiliateBalanceView
+       [0].nonAffiliateBalance) / 1000}`;
+
+      } catch (error) {
+        console.log('Error while loading balances: ', error);
+    }
+  });
+</script>
+</body>
+</html>

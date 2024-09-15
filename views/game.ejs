@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin the Wheel</title>
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="css/toastify.min.css">
+  
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /*display: flex;*/
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #082104 !important;
+    }
+
+    .wheel-container {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+
+    canvas {
+      /* border: 5px solid #333; */
+      border-radius: 50%;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #096404 !important;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .pointer {
+      position: relative;
+      z-index: 10;
+      top: 2;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid silver;
+      margin-bottom: 5px;
+      transform: rotate(180deg);
+    }
+    #wheelCanvas {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);    }
+  </style>
+</head>
+<body>
+    <h2 class="text-center text-white">Spin the wheel</h2>
+    <!-- Back Button -->
+  <div class="login-back-button px-3 pt-3" style="cursor: pointer;">
+    <i class="fa-solid fa-arrow-left" onclick="goBack()" style="color: #fff;"></i>
+  </div>
+
+  <div class="wheel-container">
+    <div class="pointer"></div>
+    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+    <button class="btn text-white" id="spinButton">Spin the Wheel</button>
+    <div id="result"></div>
+  </div>
+
+  <!--build:js-->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Toastify JS -->
+    <script type="text/javascript" src="js/toastify.js"></script>
+
+
+    <script src="js/alert.js"></script>
+    <!--endbuild-->
+
+  <script>
+     function goBack() {
+  window.history.back();
+  }
+
+
+    const canvas = document.getElementById('wheelCanvas');
+    const ctx = canvas.getContext('2d');
+    const spinButton = document.getElementById('spinButton');
+    const result = document.getElementById('result');
+
+    const foodItems = ["50", "100", "200", "300", "500", "0"];
+    const numSegments = foodItems.length;
+    const segmentAngle = (2 * Math.PI) / numSegments;
+    let isSpinning = false;
+    let currentRotation = 0;
+    let spinTime = 0;
+
+    function drawWheel() {
+      // Draw Wheel Segments
+      for (let i = 0; i < numSegments; i++) {
+        const angleStart = i * segmentAngle;
+        const angleEnd = angleStart + segmentAngle;
+
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2, canvas.height / 2);
+        ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, angleStart, angleEnd);
+
+        ctx.fillStyle = i % 2 === 0 ? '#07DE0A' : '#000000';
+        ctx.fill();
+        ctx.stroke();
+
+        // Text for food item
+        ctx.save();
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.rotate(angleStart + segmentAngle / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#fff";
+        ctx.font = "16px Arial";
+        ctx.fillText(foodItems[i], canvas.width / 2 - 10, 10);
+        ctx.restore();
+      }
+    }
+
+    function spinWheel() {
+      if (isSpinning) return;
+      isSpinning = true;
+      spinTime = Math.random() * 3000 + 2000; // Spin for random duration
+      const spinInterval = setInterval(() => {
+        currentRotation += 5;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.rotate(currentRotation * Math.PI / 180);
+        ctx.translate(-canvas.width / 2, -canvas.height / 2);
+        drawWheel();
+        ctx.restore();
+      }, 20);
+
+      setTimeout(() => {
+        clearInterval(spinInterval);
+        isSpinning = false;
+        displayResult();
+      }, spinTime);
+    }
+
+    function displayResult() {
+      const normalizedRotation = (currentRotation % 360 + 360) % 360;
+      const offset = 90;
+      const segmentIndex = Math.floor((360 - (normalizedRotation + offset)) / (360 / numSegments)) % numSegments;
+
+      if (segmentIndex < 0 || segmentIndex >= foodItems.length) {
+        console.error('Segment index out of bounds:', segmentIndex);
+        return spinWheel();
+      }
+
+      result.textContent = `You got: ${foodItems[segmentIndex]}`;
+      alert(`You (<%= user.username %>) got: ${foodItems[segmentIndex]}`);
+
+      fetch('/credit-game-balance', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({userId: `<%= user.user_id %>`, amount: foodItems[segmentIndex]})
+      })
+      .then((response)=>{
+        return response.json();
+      })
+      .then((data)=>{
+        console.log(data);
+        
+        if(data.message){
+          myAlert(data.message, 'green');
+        } else if(data.notLoggedIn){
+          myAlert('Please Log in', 'red');
+
+          setTimeout(()=>{
+            location.assign('/user/login');
+          }, 1000)
+        } else if (data.played){
+          myAlert('You have already played', 'red');
+        }
+        else{
+          console.log(data.error);
+          
+          myAlert('Internal server error', 'red');
+        }
+      })
+      .catch((error)=>{
+        console.log(error);
+        myAlert('An error ocurred', 'red');
+      });
+    }
+
+    spinButton.addEventListener('click', spinWheel);
+    drawWheel();
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://www.Prime-tech.net/user/login -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <!-- Title -->
+  <title>Prime-tech || Admin Login</title>
+  <link rel="shortcut icon" type="image/png" href="img/logo (3).png">
+
+  <!-- Style CSS -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+  <style>
+    /* .primary-btn{background-color: #096404;position:relative;z-index:1}.primary-btn span{margin-left:6px}.primary-btn::before{content:"";position:absolute;left:0;top:0;width:102%;height:100%; background-color: #071903;z-index:-1;opacity:0;-webkit-transition:all .3s ease-in;transition:all .2s ease-in}.primary-btn:hover{color:#fff}.primary-btn:hover::before{opacity:1}.outline-btn{border:1px solid #fff;padding:15px 32px}
+    a {text-decoration: none; color: #096404 !important;} */
+    .bg-one {
+  /* background-color: #071903; */
+  background-color: #082104;
+}
+.btn-color {
+  background-color: #096404 !important;
+}
+.color-one {
+  color: #07DE0A !important;
+}
+a {
+  text-decoration: none;
+}
+
+  </style>
+</head>
+
+<body class="bg-one">
+
+  <div class="login-back-button px-3 py-3" style="cursor: pointer;">
+    <i onclick="goBack()" class="fa-solid fa-arrow-left" style="color: #fff;"></i>
+  </div>
+
+ 
+  <!-- Login Wrapper Area -->
+  <form action="/admin-login" method="post">
+  <div class="login-wrapper d-flex align-items-center justify-content-center">
+    <div class="custom-container">
+      <div class="text-center px-4">
+        <img class="login-intro-img" src="/img/logo (3).png" style="height: 80px;" alt="">
+      </div>
+
+      <!-- Register Form -->
+      <div class="register-form mt-4">
+        <h6 class="mb-3 text-center color-one">Log in as admin...</h6>
+
+        
+          <div class="form-group mb-3">
+            <input class="form-control py-2" type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+
+          <div class="form-group position-relative">
+            <input class="form-control py-2" id="psw-input" name="password" type="password" placeholder="Enter Password" required>
+            <div class="position-absolute" id="password-visibility">            
+            </div>
+          </div>
+          <!-- <a href="Dashboard.html">
+            <button class="btn primary-btn w-100 text-white mt-3 fw-bold">Sign In</button>
+          </a> -->
+          <button class="btn btn-color w-100 text-white mt-3 fw-bold">Log In</button>
+         
+        
+      </div><br>
+    </div>
+  </div>
+</form>
+
+<span id="serverError" class="d-none"><%= locals.errorMessage %></span>
+
+ <!--build:js-->
+ <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+ <script src="jquery-3.6.0.min.js.download"></script>
+
+ <!-- Toastify JS -->
+ <script type="text/javascript" src="/js/toastify.js"></script>
+
+ <script src="app.js.download2"></script>
+ <script src="active.js.download"></script>
+ <!--endbuild-->
+ 
+ <script src="/js/script.js"></script>
+ <script src="/js/alert.js"></script>
+ <script>
+  function goBack() {
+  window.history.back()
+}
+var errorMessage = document.getElementById('serverError');
+  document.addEventListener('DOMContentLoaded', ()=>{
+    if (errorMessage.innerHTML) {
+    myAlert(errorMessage.innerHTML, 'red');
+  } else {
+    return;
+  }
+  });
+ </script>
+
+</body>
+</html>

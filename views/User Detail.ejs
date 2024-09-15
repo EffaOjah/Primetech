@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven - User Detail - <%= userDetails[0].username %></title>
+
+    <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    <link href="css/css2.js" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/all.min.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/line-awesome.min.css">
+
+    
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/select2.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+
+<style>
+    .bg-one {
+            background-color: #082104;
+    }
+    .btn-color {
+        background-color: #096404 !important;
+    }
+</style>
+
+    </head>
+<body>
+    <!-- page-wrapper start -->
+    <div class="page-wrapper default-version">
+        <div class="sidebar text-white bg-one">
+            <button class="res-sidebar-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sidebar__inner">
+                <div class="sidebar__logo">
+                    <a href="/admin/dashboard" class="sidebar__main-logo"><img src="/img/logo (3).png" alt="image"></a>
+                </div>
+        
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 86.75px);">
+                    <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper" style="overflow: scroll; width: auto; height: calc(100vh - 86.75px);">
+                    <ul class="sidebar__menu text-white">
+                        <li class="sidebar-menu-item">
+                            <a href="/admin/dashboard" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-house"></i>                        
+                                <span class="menu-title text-white">Dashboard</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin-withdrawal" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-money-check-dollar"></i>
+                                <span class="menu-title text-white">Auto Withdrawal</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/website-settings" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Site Settings</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/coupon/generate" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Generate Coupon</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/coupon-codes" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Admin Codes</span>
+                            </a>
+                        </li>
+        
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-users-gear"></i>
+                                <span class="menu-title text-white">Manage Users</span>
+        
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/active-users" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Active Users</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/all-vendors" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Vendors</span>
+                                            
+                                        </a>
+                                    </li>
+        
+                                    
+        
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/sendNotifications" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Notification to All</span>
+                                        </a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                        
+        
+                        <!--<li class="sidebar-menu-item sidebar-dropdown">-->
+                        <!--    <a href="javascript:void(0)" class="">-->
+                        <!--        <i class="menu-icon las la-file-invoice-dollar"></i>-->
+                        <!--        <span class="menu-title text-white">Deposits</span>-->
+                        <!--        -->
+                        <!--    </a>-->
+                        <!--    <div class="sidebar-submenu  ">-->
+                        <!--        <ul>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/pending" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Pending Deposits</span>-->
+                        <!--                    -->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/approved" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Approved Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/rejected" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Rejected Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</li>-->
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="menu-title text-white">Withdrawals </span>
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-affiliate-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Affiliate Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-earnings-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Earnings Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/approved-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Approved Withdrawals</span>
+                                        </a>
+                                    </li>
+        
+                                    <!-- <li class="sidebar-menu-item ">
+                                        <a href="Rejected Withdrawals.html" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Rejected Withdrawals</span>
+                                        </a>
+                                    </li> -->
+        
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                       
+        
+        
+                        
+        
+                        <!-- <li class="sidebar__menu-header">Settings</li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-gear"></i>
+                                <span class="menu-title text-white">General Setting</span>
+                            </a>
+                        </li>
+        
+                       
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-user-tie"></i>
+                                <span class="menu-title text-white">SEO Manager</span>
+                            </a>
+                        </li> -->
+                        
+                        <li class="sidebar__menu-header">Sponsored Posts</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/add-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">Add Sponsored Post</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/all-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">All Sponsored Posts</span>
+                            </a>
+                        </li>
+                        
+        
+                        <li class="sidebar__menu-header">Extra</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Maintenance Mode</span>
+                            </a>
+                        </li>
+                        
+                        
+        
+                       
+                    </ul>
+                    <div class="text-center mb-3 text-uppercase">
+                        <span class="text--white">Arvys Tech.</span>
+                        <span class="text--success">V1.0 </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- sidebar end -->
+
+        <!-- navbar-wrapper start -->
+<nav class="navbar-wrapper bg--dark">
+    <div class="navbar__left">
+        <button type="button" class="res-sidebar-open-btn me-3"><i class="las la-bars"></i></button>
+        <form class="navbar-search">
+            <input type="search" name="#0" class="navbar-search-field" id="searchInput" autocomplete="off" placeholder="Search here...">
+            <i class="las la-search"></i>
+            <ul class="search-list"></ul>
+        </form>
+    </div>
+    <div class="navbar__right">
+        <ul class="navbar__action-list">
+
+            <li class="dropdown">
+                <button type="button" class="primary--layer" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                    <i class="las la-bell text--primary  icon-left-right "></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu--md p-0 border-0 box--shadow1 dropdown-menu-right">
+                    <div class="dropdown-menu__header">
+                        <span class="caption">Notification</span>
+                                                    <p>You have 31209 unread notification</p>
+                                            </div>
+                    
+                    <div class="dropdown-menu__footer">
+                        <a href="#" class="view-all-message">View all notification</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="dropdown">
+                <button type="button" class="" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                    <span class="navbar-user">
+                        <span class="navbar-user__thumb"><img src="/65e9614c425601709793612.png" alt="image"></span>
+                        <span class="navbar-user__info">
+                            <span class="navbar-user__name">geekdev</span>
+                        </span>
+                        <span class="icon"><i class="las la-chevron-circle-down"></i></span>
+                    </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
+                    <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon las la-user-circle"></i>
+                        <span class="dropdown-menu__caption">Profile</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon las la-key"></i>
+                        <span class="dropdown-menu__caption">Password</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon las la-sign-out-alt"></i>
+                        <span class="dropdown-menu__caption">Logout</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- navbar-wrapper end -->
+
+        <div class="body-wrapper">
+            <div class="bodywrapper__inner">
+
+                <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
+    <h6 class="page-title">User Detail - <%= userDetails[0].username %></h6>
+    <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
+            </div>
+</div>
+
+                    <div class="row">
+        <div class="col-12">
+            <div class="row gy-4">
+
+                <div class="col-xxl-3 col-sm-6">
+                    <div class="widget-two style--two box--shadow2 b-radius--5 bg--19">
+                        <div class="widget-two__icon b-radius--5 bg--primary">
+                            <i class="las la-money-bill-wave-alt"></i>
+                        </div>
+                        <div class="widget-two__content">
+                            <h3 class="text-white">$<%= userDetails[0].total_affiliate_balance / 1000%></h3>
+                            <p class="text-white">Affiliate Balance</p>
+                        </div>
+                        <a href="#" class="widget-two__btn">View All</a>
+                    </div>
+                </div>
+                <!-- dashboard-w1 end -->
+
+
+                <div class="col-xxl-3 col-sm-6">
+                    <div class="widget-two style--two box--shadow2 b-radius--5 bg--primary">
+                        <div class="widget-two__icon b-radius--5 bg--primary">
+                            <i class="las la-wallet"></i>
+                        </div>
+                        <div class="widget-two__content">
+                            <h3 class="text-white">$<%= userDetails[0].game_balance %></h3>
+                            <p class="text-white">Game Balance</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- dashboard-w1 end -->
+                
+                
+                <div class="col-xxl-3 col-sm-6">
+                    <div class="widget-two style--two box--shadow2 b-radius--5 bg--primary">
+                        <div class="widget-two__icon b-radius--5 bg--primary">
+                            <i class="las la-wallet"></i>
+                        </div>
+                        <div class="widget-two__content">
+                            <h3 class="text-white">$<%= userDetails[0].total_activities_balance / 1000 %></h3>
+                            <p class="text-white">Earnings Balance</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- dashboard-w1 end -->
+
+                <div class="col-xxl-3 col-sm-6">
+                    <div class="widget-two style--two box--shadow2 b-radius--5 bg--1">
+                        <div class="widget-two__icon b-radius--5 bg--primary">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="widget-two__content">
+                            <h3 class="text-white">₦0.00</h3>
+                            <p class="text-white">Withdrawals</p>
+                        </div>
+                        <a href="#" class="widget-two__btn">View All</a>
+                    </div>
+                </div>
+                <!-- dashboard-w1 end -->
+
+                
+
+
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+                <!-- <div class="flex-fill">
+                    <button data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn--success btn--shadow w-100 btn-lg bal-btn" data-act="add">
+                        <i class="las la-plus-circle"></i>  Aff Balance                    </button>
+                </div>
+
+                <div class="flex-fill">
+                    <button data-bs-toggle="modal" data-bs-target="#subModal" class="btn btn--danger btn--shadow w-100 btn-lg bal-btn" data-act="sub">
+                        <i class="las la-minus-circle"></i> Aff Balance                    </button>
+                </div>
+
+                <div class="flex-fill">
+                    <a href="#" class="btn btn--primary btn--shadow w-100 btn-lg">
+                        <i class="las la-list-alt"></i>Logins                    </a>
+                </div>
+
+                <div class="flex-fill">
+                    <a href="#" class="btn btn--secondary btn--shadow w-100 btn-lg">
+                        <i class="las la-bell"></i>Notifications                    </a>
+                </div> -->
+
+                <div class="flex-fill">
+                    <a href="#" class="btn btn--primary btn--gradi btn--shadow w-100 btn-lg">
+                        <i class="las la-sign-in-alt"></i>Login as User                    </a>
+                </div>
+
+                <% if (userDetails[0].is_banned == 0) { %>
+                    <div class="flex-fill">
+                        <button type="button" class="btn btn--warning btn--shadow w-100 btn-lg userStatus" data-bs-toggle="modal" data-bs-target="#banUser"><i class="las la-ban"></i>Ban User</button>
+                    </div>
+                <% } else { %>
+                    <div class="flex-fill">
+                        <button type="button" class="btn btn--warning btn--shadow w-100 btn-lg userStatus" data-bs-toggle="modal" data-bs-target="#unbanUser"><i class="las la-ban"></i>Unban User</button>
+                    </div>
+               <% } %>
+                
+                <!--<div class="flex-fill">-->
+                <!--    <a href="#" class="btn btn--success btn--shadow w-100 btn-lg">-->
+                <!--        <i class="las la-hand-holding-usd"></i>Investments-->
+                <!--    </a>-->
+                <!--</div>-->
+                <!-- <div class="">
+                    <a href="#" class="btn btn--primary  btn--shadow w-100 btn-lg">
+                        <i class="las la-user-friends"></i> Referrals                    </a>
+                </div> -->
+
+                <% if (userDetails[0].is_a_vendor == 0) { %>
+                    <div class="flex-fill">
+                        <span class="btn btn-success  btn--shadow w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="las la-user-friends"></i> Make User a Vendor           
+                        </span>
+
+                        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="/make-vendor" method="post">
+        <input type="hidden" name="userId" value="<%= userDetails[0].user_id %>" id="">
+        <input type="hidden" name="username" value="<%= userDetails[0].username %>" id="">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Make user a Vendor</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="col-xl-12 col-md-6 form-group">
+                <h5>Make user a vendor</h5>
+                    <label for="vlink">Vendor Link:</label>
+                    <input class="form-control" type="url" name="vlink" required="required" id="vlink">
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn--success">Save changes</button>
+        </div>
+      </div>
+    </div>
+</form>
+  </div>
+
+  
+                    </div>
+
+                    
+                <% } else{ %>
+                    <div class="flex-fill">
+                        <form action="/remove-vendor" method="post">
+                            <input type="hidden" name="userId" value="<%= userDetails[0].user_id %>" id="">
+                            <input type="hidden" name="username" value="<%= userDetails[0].username %>" id="">
+                        <button type="submit"  class="btn btn-danger  btn--shadow w-100 btn-lg">
+                            <i class="las la-user-friends"></i> Remove User as Vendor                    
+                        </button>
+                        </form>
+                    </div>
+                    <% } %>
+                
+            </div>
+
+
+            <div class="card mt-30">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Information of <%= userDetails[0].first_name %> <%= userDetails[0].last_name %></h5>
+                </div>
+                <div class="card-body">
+                    <form action="/update-user-details" method="POST">
+                        <input type="hidden" name="userId" value="<%= userDetails[0].user_id %>" id="">
+                        <input type="hidden" name="username" value="<%= userDetails[0].username%>" id="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="firstname" class="required">First Name</label>
+                                    <input class="form-control" type="text" name="firstName" required="" value="<%= userDetails[0].first_name %>" id="firstname">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label required" for="lastname">Last Name</label>
+                                    <input class="form-control" type="text" name="lastName" required="" value="<%= userDetails[0].last_name %>" id="lastname">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="required">Email </label>
+                                    <input class="form-control" type="email" name="email" value="<%= userDetails[0].email %>" required="" id="email">
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Mobile Number </label>
+                                    <div class="input-group ">
+                                        <input type="number" name="mobileNumber" value="<%= userDetails[0].phone_number %>" id="mobile" class="form-control checkUser">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pass">Set New Password </label>
+                                    <input class="form-control" type="text" name="newPassword" id="pass">
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pin">Set  User Pin </label>
+                                    <input class="form-control" type="number" name="pin" value="" maxlength="4" id="pin">
+                                </div>
+                            </div> -->
+                            
+                            
+                            
+                            
+                        </div>
+
+
+                        <div class="row mt-4">
+                            <!--<div class="col-md-12">-->
+                            <!--    <div class="form-group ">-->
+                            <!--        <label>Vendor List Number</label>-->
+                            <!--        <input class="form-control" type="text" name="vno" value="">-->
+                            <!--    </div>-->
+                            <!--</div>-->
+
+                            
+                            
+                            <div class="col-xl-3 col-md-6">
+                        
+                        </div>
+
+
+                        
+
+
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-color text-white w-100 h-45">Submit                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal to ban user -->
+    <div id="banUser" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                                                <span>Ban User</span>
+                                            </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="/ban-user" method="POST">
+                    <input type="hidden" name="userId" value="<%= userDetails[0].user_id%>">           
+                    <input type="hidden" name="username" value="<%= userDetails[0].username %>">           
+                    <div class="modal-body">
+                     <h6 class="mb-2">If you ban this user he/she won't able to access his/her dashboard.</h6>
+                     <div class="row justify-content-center gap-3">
+                        <span type="submit" class="btn btn-info col-md-5">cancel</span>
+                        <button type="submit" class="btn btn-danger col-md-5">ban</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to unban user -->
+    <div id="unbanUser" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                                                <span>Unban User</span>
+                                            </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="/unban-user" method="POST">
+                    <input type="hidden" name="userId" value="<%= userDetails[0].user_id%>">           
+                    <input type="hidden" name="username" value="<%= userDetails[0].username %>">           
+                    <div class="modal-body">
+                     <h6 class="mb-2">Are you sure you want to unban this user</h6>
+                     <div class="row justify-content-center gap-3">
+                        <span type="submit" class="btn btn-info col-md-5">cancel</span>
+                        <button type="submit" class="btn btn-danger col-md-5">unban</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+            </div><!-- bodywrapper__inner end -->
+        </div><!-- body-wrapper end -->
+    </div>
+
+
+
+
+
+
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/bootstrap-5.0.2-dist/js/bootstrap-toggle.min.js"></script>
+<script src="/bootstrap-5.0.2-dist/js/jquery.slimscroll.min.js"></script>
+
+
+<link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/iziToast.min.css">
+<script src="/bootstrap-5.0.2-dist/js/iziToast.min.js"></script>
+
+
+
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/js/app2.js"></script>
+<script src="/js/cu-modal.js"></script>
+
+
+
+<script>
+    "use strict";
+    bkLib.onDomLoaded(function() {
+        $( ".nicEdit" ).each(function( index ) {
+            $(this).attr("id","nicEditor"+index);
+            new nicEditor({fullPanel : true}).panelInstance('nicEditor'+index,{hasPanel : true});
+        });
+    });
+    (function($){
+        $( document ).on('mouseover ', '.nicEdit-main,.nicEdit-panelContain',function(){
+            $('.nicEdit-main').focus();
+        });
+    })(jQuery);
+</script>
+
+    <script>
+        if($('li').hasClass('active')){
+            $('#sidebar__menuWrapper').animate({
+                scrollTop: eval($(".active").offset().top - 320)
+            },500);
+        }
+    </script>
+
+
+
+
+</div></body></html>

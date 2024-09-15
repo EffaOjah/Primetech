@@ -1,0 +1,1298 @@
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+(node:3696316) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3696316) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:3696316) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:3696316) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(node:3696316) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+(node:3696316) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(node:3696316) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+TypeError: /home/isonyefo/primetech.net.ng/Primetech/views/User Detail.ejs:5
+    3|     
+    4|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ >> 5|     <title>Raven - User Detail - <%= userDetails[0].username %></title>
+    6| 
+    7|     <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    8|     <link href="css/css2.js" rel="stylesheet">
+
+Cannot read property 'username' of undefined
+    at eval (eval at compile (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:673:12), <anonymous>:12:41)
+    at User Detail (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:274:36)
+    at View.exports.renderFile [as engine] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:657:10)
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:609:3)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:168:9
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error: Failed to lookup view "Top earners" in views directory "/home/isonyefo/primetech.net.ng/Primetech/views"
+    at Function.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/application.js:597:17)
+    at ServerResponse.render (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/response.js:1048:7)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/viewPagesController.js:22:9
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/layer.js:95:5)
+    at /home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/isonyefo/primetech.net.ng/Primetech/node_modules/express/lib/router/index.js:280:10)
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+(node:3705629) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3705629) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:3705629) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:3705629) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(node:3705629) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+(node:3705629) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(node:3705629) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:3760613) UnhandledPromiseRejectionWarning: Error: ER_NO_SUCH_TABLE: Table 'isonyefo_primetechdb.withdrawalsettings' doesn't exist
+    at Query.Sequence._packetToError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:293:12)
+    --------------------
+    at Protocol._enqueue (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:198:25)
+    at /home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:189:20
+    at new Promise (<anonymous>)
+    at Object.getSettings (/home/isonyefo/primetech.net.ng/Primetech/Functions/adminFunctions.js:188:12)
+    at /home/isonyefo/primetech.net.ng/Primetech/Contollers/adminController.js:182:46
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3760613) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:3760613) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:377
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:400:28)
+    at Protocol._delegateError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/isonyefo/primetech.net.ng/Primetech/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:400:28)
+    at emitErrorNT (internal/streams/destroy.js:106:8)
+    at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}

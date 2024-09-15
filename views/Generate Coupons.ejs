@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prinetech - Generate Coupons</title>
+
+    <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <style>
+        .bg-one {
+            background-color: #082104;
+        }
+        .btn-color {
+            background-color: #096404 !important;
+        }
+    </style>
+    </head>
+<body>
+    <!-- page-wrapper start -->
+    <div class="page-wrapper default-version">
+        <div class="sidebar text-white bg-one">
+            <button class="res-sidebar-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sidebar__inner">
+                <div class="sidebar__logo">
+                    <a href="/admin/dashboard" class="sidebar__main-logo"><img src="/img/logo (3).png" alt="image"></a>
+                </div>
+        
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 86.75px);">
+                    <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper" style="overflow: scroll; width: auto; height: calc(100vh - 86.75px);">
+                    <ul class="sidebar__menu text-white">
+                        <li class="sidebar-menu-item">
+                            <a href="/admin/dashboard" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-house"></i>                        
+                                <span class="menu-title text-white">Dashboard</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/website-settings" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Site Settings</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item active">
+                            <a href="/coupon/generate" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Generate Coupon</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/coupon-codes" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Admin Codes</span>
+                            </a>
+                        </li>
+        
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-users-gear"></i>
+                                <span class="menu-title text-white">Manage Users</span>
+        
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/active-users" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Active Users</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/all-vendors" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Vendors</span>
+                                            
+                                        </a>
+                                    </li>
+        
+                                    
+        
+        
+                                    <!-- <li class="sidebar-menu-item ">
+                                        <a href="/sendNotifications" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Notification to All</span>
+                                        </a>
+                                    </li> -->
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                        
+        
+                        <!--<li class="sidebar-menu-item sidebar-dropdown">-->
+                        <!--    <a href="javascript:void(0)" class="">-->
+                        <!--        <i class="menu-icon las la-file-invoice-dollar"></i>-->
+                        <!--        <span class="menu-title text-white">Deposits</span>-->
+                        <!--        -->
+                        <!--    </a>-->
+                        <!--    <div class="sidebar-submenu  ">-->
+                        <!--        <ul>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/pending" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Pending Deposits</span>-->
+                        <!--                    -->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/approved" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Approved Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/rejected" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Rejected Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</li>-->
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="menu-title text-white">Withdrawals </span>
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-affiliate-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Affiliate Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-earnings-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Earnings Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/approved-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Approved Withdrawals</span>
+                                        </a>
+                                    </li>
+        
+                                    <!-- <li class="sidebar-menu-item ">
+                                        <a href="Rejected Withdrawals.html" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Rejected Withdrawals</span>
+                                        </a>
+                                    </li> -->
+        
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                       
+        
+        
+                        
+        
+                        <!-- <li class="sidebar__menu-header">Settings</li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-gear"></i>
+                                <span class="menu-title text-white">General Setting</span>
+                            </a>
+                        </li>
+        
+                       
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-user-tie"></i>
+                                <span class="menu-title text-white">SEO Manager</span>
+                            </a>
+                        </li> -->
+                        
+                        <li class="sidebar__menu-header">Sponsored Posts</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/add-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">Add Sponsored Post</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/all-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">All Sponsored Posts</span>
+                            </a>
+                        </li>
+                        
+        
+                       
+                        <li class="sidebar__menu-header">Extra</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Maintenance Mode</span>
+                            </a>
+                        </li>
+                        
+                        
+        
+                       
+                    </ul>
+                    <div class="text-center mb-3 text-uppercase">
+                        <span class="text--white">Arvys Tech.</span>
+                        <span class="text--success">V1.0 </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar end -->
+        
+                <!-- navbar-wrapper start -->
+        <nav class="navbar-wrapper bg-one">
+            <div class="navbar__left">
+                <button type="button" class="res-sidebar-open-btn me-3"><i class="fa-solid fa-bars"></i></button>
+                <form class="navbar-search">
+                    <input type="search" name="#0" class="navbar-search-field" id="searchInput" autocomplete="off" placeholder="Search here...">
+                    <i class="fa-solid fa-magnifying-glass"></i>         
+                    <ul class="search-list"></ul>
+                </form>
+            </div>
+            <div class="navbar__right">
+                <ul class="navbar__action-list">
+        
+                    <li class="dropdown">
+                        <button type="button" class="primary--layer" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-bell text--primary  icon-left-right "></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu--md p-0 border-0 box--shadow1 dropdown-menu-right">
+                            <div class="dropdown-menu__header">
+                                <span class="caption">Notification</span>
+                                                            <p>You have 31214 unread notification</p>
+                                                    </div>
+                            
+                            <div class="dropdown-menu__footer">
+                                <a href="#" class="view-all-message">View all notification</a>
+                            </div>
+                        </div>
+                    </li>
+        
+        
+                    <li class="dropdown">
+                        <button type="button" class="" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-user">
+                                <span class="navbar-user__thumb"><img src="/img/637884b0303b61668842672.jpeg" alt="image"></span>
+                                <span class="navbar-user__info">
+                                    <span class="navbar-user__name">geekdev</span>
+                                </span>
+                                <span class="icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
+                            <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-regular fa-user"></i>
+                                <span class="dropdown-menu__caption">Profile</span>
+                            </a>
+        
+                            <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-solid fa-key"></i>                        
+                                <span class="dropdown-menu__caption">Password</span>
+                            </a>
+        
+                            <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-solid fa-arrow-right-from-bracket"></i>                        
+                                <span class="dropdown-menu__caption">Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar-wrapper end -->
+
+        <div class="body-wrapper">
+            <div class="bodywrapper__inner">
+
+                <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
+    <h6 class="page-title">Generate Coupons</h6>
+    <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
+            </div>
+</div>
+
+                    <div class="row">
+        <div class="col-12">
+            <div class="row gy-4">
+
+
+            </div>
+
+            <form action="/generate-coupon-code" method="POST">
+
+            <div class="card mt-30">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Generate Coupons</h5>
+                </div>
+                <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                            <label for="vendor">Vendor</label>
+                            <select class="form-control" name="vendor" id="vendor">
+                               <option value="" selected=""> Select Vendor</option>
+                               <% for( let i = 0; i < vendors.length; i++ ) { %>
+                                <option value="<%= vendors[i].username %>*<%= vendors[i].user_id %>"><%= vendors[i].username %></option>
+                               <% } %>
+                               
+                                </select>
+                            </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                <label for="vendor">Country</label>
+                                <select class="form-control" name="country" id="vendor">
+                                   <option value="" selected=""> Select Country</option>
+                                    <option value="NGA">NGA</option>
+                                    <option value="CMR">CMR</option>
+                                    <option value="GHA">GHA</option>
+                                   </select>
+                                </div>
+                                </div>
+
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <label for="number">Number Of Coupons</label>
+                            <input type="number" class="form-control" name="noOfCoupons" id="number" required>
+                            
+                            </div>
+                            </div>
+                            
+                        </div>
+
+                        
+
+
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-color w-100 h-45 text-white">Generate Coupon(s)</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </form>
+                
+        </div>
+    </div>
+
+
+
+            </div><!-- bodywrapper__inner end -->
+        </div><!-- body-wrapper end -->
+    </div>
+
+
+
+    <span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+    <span id="alertColor" class="d-none"><%= locals.alertColor %></span>
+
+
+
+    <!--build:js-->
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+<!-- Toastify JS -->
+<script type="text/javascript" src="/js/toastify.js"></script>
+
+
+<script src="/js/active.js"></script>
+<script src="/js/alert.js"></script>
+<!--endbuild-->
+
+<!-- Script to display alert -->
+<script>
+    const alertMessage = document.getElementById('alertMessage');
+    const alertColor = document.getElementById('alertColor');
+  
+      document.addEventListener('DOMContentLoaded', ()=>{
+        if (alertMessage.innerHTML) {
+            myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+        } else {
+          return;
+        }
+        
+      });
+  </script>
+
+    <script src="/js/app2.js"></script>
+
+
+    <script>
+        if($('li').hasClass('active')){
+            $('#sidebar__menuWrapper').animate({
+                scrollTop: eval($(".active").offset().top - 320)
+            },500);
+        }
+    </script>
+
+
+
+
+</body></html>

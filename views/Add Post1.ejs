@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primetech - Add Post 1</title>
+
+    <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
+
+    <style>
+        .bg-one {
+            background-color: #082104;
+        }
+        .btn-color {
+            background-color: #096404 !important;
+            color: white;
+        }
+    </style>
+    </head>
+<body>
+    <!-- page-wrapper start -->
+    <div class="page-wrapper default-version">
+        <div class="sidebar text-white bg-one">
+            <button class="res-sidebar-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sidebar__inner">
+                <div class="sidebar__logo">
+                    <a href="/admin/dashboard" class="sidebar__main-logo"><img src="/img/logo (3).png" alt="image"></a>
+                </div>
+        
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 86.75px);">
+                    <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper" style="overflow: scroll; width: auto; height: calc(100vh - 86.75px);">
+                    <ul class="sidebar__menu text-white">
+                        <li class="sidebar-menu-item active">
+                            <a href="/admin/dashboard" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-house"></i>                        
+                                <span class="menu-title text-white">Dashboard</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/website-settings" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Site Settings</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/coupon/generate" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Generate Coupon</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/coupon-codes" class="nav-link text-white ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title text-white">Admin Codes</span>
+                            </a>
+                        </li>
+        
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-users-gear"></i>
+                                <span class="menu-title text-white">Manage Users</span>
+        
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/active-users" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Active Users</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/all-vendors" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Vendors</span>
+                                            
+                                        </a>
+                                    </li>
+        
+                                    
+        
+        
+                                    <!-- <li class="sidebar-menu-item ">
+                                        <a href="/sendNotifications" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Notification to All</span>
+                                        </a>
+                                    </li> -->
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                        
+        
+                        <!--<li class="sidebar-menu-item sidebar-dropdown">-->
+                        <!--    <a href="javascript:void(0)" class="">-->
+                        <!--        <i class="menu-icon las la-file-invoice-dollar"></i>-->
+                        <!--        <span class="menu-title text-white">Deposits</span>-->
+                        <!--        -->
+                        <!--    </a>-->
+                        <!--    <div class="sidebar-submenu  ">-->
+                        <!--        <ul>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/pending" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Pending Deposits</span>-->
+                        <!--                    -->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/approved" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Approved Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/rejected" class="nav-link text-white">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title text-white">Rejected Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</li>-->
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="menu-title text-white">Withdrawals </span>
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-affiliate-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Affiliate Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-earnings-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Earnings Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/approved-withdrawals" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Approved Withdrawals</span>
+                                        </a>
+                                    </li>
+        
+                                    <!-- <li class="sidebar-menu-item ">
+                                        <a href="Rejected Withdrawals.html" class="nav-link text-white">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title text-white">Rejected Withdrawals</span>
+                                        </a>
+                                    </li> -->
+        
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                       
+        
+        
+                        
+        
+                        <!-- <li class="sidebar__menu-header">Settings</li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-gear"></i>
+                                <span class="menu-title text-white">General Setting</span>
+                            </a>
+                        </li>
+        
+                       
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-user-tie"></i>
+                                <span class="menu-title text-white">SEO Manager</span>
+                            </a>
+                        </li>
+                         -->
+                        <li class="sidebar__menu-header">Sponsored Posts</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/add-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">Add Sponsored Post</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/all-sponsored-post" class="nav-link text-white">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title text-white">All Sponsored Posts</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar__menu-header">Extra</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title text-white">Maintenance Mode</span>
+                            </a>
+                        </li>
+                        
+                        
+        
+                       
+                    </ul>
+                    <div class="text-center mb-3 text-uppercase">
+                        <span class="text--white">Arvys Tech.</span>
+                        <span class="text--success">V1.0 </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- sidebar end -->
+
+        <!-- navbar-wrapper start -->
+<nav class="navbar-wrapper bg-one">
+    <div class="navbar__left">
+        <button type="button" class="res-sidebar-open-btn me-3"><i class="fa-solid fa-bars"></i></button>
+        <form class="navbar-search">
+            <input type="search" name="#0" class="navbar-search-field" id="searchInput" autocomplete="off" placeholder="Search here...">
+            <i class="fa-solid fa-magnifying-glass"></i>         
+            <ul class="search-list"></ul>
+        </form>
+    </div>
+    <div class="navbar__right">
+        <ul class="navbar__action-list">
+
+            <li class="dropdown">
+                <button type="button" class="primary--layer" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-regular fa-bell text--primary  icon-left-right "></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu--md p-0 border-0 box--shadow1 dropdown-menu-right">
+                    <div class="dropdown-menu__header">
+                        <span class="caption">Notification</span>
+                                                    <p>You have 31214 unread notification</p>
+                                            </div>
+                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 270px;"><div class="dropdown-menu__body" style="overflow: hidden; width: auto; height: 270px;">
+                                                    <a href="https://earnhive.net/admin/notification/read/31214" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="/img/637884b0303b61668842672.jpeg" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31213" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31212" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31211" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31210" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31209" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31208" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            2 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31207" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            3 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31206" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            3 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                                    <a href="https://earnhive.net/admin/notification/read/31205" class="dropdown-menu__item">
+                                <div class="navbar-notifi">
+                                    <div class="navbar-notifi__left bg--green b-radius--rounded"><img src="./Admin Dashboard_files/350x300" alt="Profile Image"></div>
+                                    <div class="navbar-notifi__right">
+                                        <h6 class="notifi__title">New member registered</h6>
+                                        <span class="time"><i class="far fa-clock"></i>
+                                            3 months ago</span>
+                                    </div>
+                                </div><!-- navbar-notifi end -->
+                            </a>
+                                            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                    <div class="dropdown-menu__footer">
+                        <a href="https://earnhive.net/admin/notifications" class="view-all-message">View all notification</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="dropdown">
+                <button type="button" class="" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                    <span class="navbar-user">
+                        <span class="navbar-user__thumb"><img src="/img/637884b0303b61668842672.jpeg" alt="image"></span>
+                        <span class="navbar-user__info">
+                            <span class="navbar-user__name">geekdev</span>
+                        </span>
+                        <span class="icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
+                    </span>
+                </button>
+                <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
+                    <a href="Admin Profile.html" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon fa-regular fa-user"></i>
+                        <span class="dropdown-menu__caption">Profile</span>
+                    </a>
+
+                    <a href="Admin Password-setting.html" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon fa-solid fa-key"></i>                        
+                        <span class="dropdown-menu__caption">Password</span>
+                    </a>
+
+                    <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                        <i class="dropdown-menu__icon fa-solid fa-arrow-right-from-bracket"></i>                        
+                        <span class="dropdown-menu__caption">Logout</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- navbar-wrapper end -->
+
+        <div class="body-wrapper">
+            <div class="card mt-30">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Add Sponsored Post 1</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/add-post1" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                            <label for="image">Post Image</label>
+                            <input class="form-control" type="file" name="image" accept="image/*" id="image">
+                            </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="title">Post Title</label>
+                                    <input class="form-control" type="text" name="postTitle" id="title">
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="details">Description</label>
+                                    <textarea class="form-control" type="text" name="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+
+                            <div class="col-xl-3 col-md-6">
+                        
+                        </div>
+<!-- 
+
+                        <div class="row">
+                       
+                            <div class="form-group col-xl-3 col-md- col-12">
+                                <label for="earnings">Earnings Withdrawal </label>
+                                <div class="toggle btn btn--danger off" data-bs-toggle="toggle" style="width: 100%; height: 50px;"><input type="checkbox" data-width="100%" data-height="50" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Off" name="earnings" id="earnings"><div class="toggle-group"><label class="btn btn--success toggle-on" style="line-height: 31.6667px;">Active</label><label class="btn btn--danger active toggle-off" style="line-height: 31.6667px;">Off</label><span class="toggle-handle btn btn-default"></span></div></div>
+                            </div>
+                            
+                            
+                            <div class="form-group col-xl-3 col-md- col-12">
+                                <label for="affiliate">Affiliate Withdrawal </label>
+                                <div class="toggle btn btn--danger off" data-bs-toggle="toggle" style="width: 100%; height: 50px;"><input type="checkbox" data-width="100%" data-height="50" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Off" name="affiliate" id="affiliate"><div class="toggle-group"><label class="btn btn--success toggle-on" style="line-height: 31.6667px;">Active</label><label class="btn btn--danger active toggle-off" style="line-height: 31.6667px;">Off</label><span class="toggle-handle btn btn-default"></span></div></div>
+                            </div>
+                            
+                            
+                            <div class="form-group col-xl-3 col-md- col-12">
+                                <label for="invest">Game Withdrawal </label>
+                                <div class="toggle btn btn--danger off" data-bs-toggle="toggle" style="width: 100%; height: 50px;"><input type="checkbox" data-width="100%" data-height="50" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Off" name="invest" id="invest"><div class="toggle-group"><label class="btn btn--success toggle-on" style="line-height: 31.6667px;">Active</label><label class="btn btn--danger active toggle-off" style="line-height: 31.6667px;">Off</label><span class="toggle-handle btn btn-default"></span></div></div>
+                            </div>
+                            
+                            <div class="form-group col-xl-3 col-md- col-12">
+                                <label for="affcontest">Activate Affiliate Contest </label>
+                                <div class="toggle btn btn--danger off" data-bs-toggle="toggle" style="width: 100%; height: 50px;"><input type="checkbox" data-width="100%" data-height="50" data-onstyle="-success" data-offstyle="-danger" data-bs-toggle="toggle" data-on="Active" data-off="Off" name="affcontest" id="affcontest"><div class="toggle-group"><label class="btn btn--success toggle-on" style="line-height: 31.6667px;">Active</label><label class="btn btn--danger active toggle-off" style="line-height: 31.6667px;">Off</label><span class="toggle-handle btn btn-default"></span></div></div>
+                            </div>
+                            
+                        </div> -->
+
+
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-color w-100 h-45 fw-bold">Submit                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+                </div></form>
+            </div>
+
+        </div>
+    </div>
+
+    <span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+    <span id="alertColor" class="d-none"><%= locals.alertColor %></span>
+
+
+
+<!--build:js-->
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+<!-- Toastify JS -->
+<script type="text/javascript" src="/js/toastify.js"></script>
+
+
+<script src="/js/alert.js"></script>
+<!--endbuild-->
+
+<!-- Script to display alert -->
+<script>
+    const alertMessage = document.getElementById('alertMessage');
+    const alertColor = document.getElementById('alertColor');
+  
+      document.addEventListener('DOMContentLoaded', ()=>{
+        if (alertMessage.innerHTML) {
+            myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+        } else {
+          return;
+        }
+        
+      });
+  </script>
+
+
+    <script>
+        if($('li').hasClass('active')){
+            $('#sidebar__menuWrapper').animate({
+                scrollTop: eval($(".active").offset().top - 320)
+            },500);
+        }
+    </script>
+
+
+
+
+</body>
+</html>

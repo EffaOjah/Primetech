@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://Prime-tech .net/user/vendor/home -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime-tech ">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  
+  <!-- Title -->
+  <title> Prime-tech || Vendors Dashbaord</title>
+  <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+  
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-one">
+
+<div class="d-flex">
+
+    <div class="flex-right col-12 col-md-11">
+      <!-- Navbar -->
+      <%- include('./partials/dashboardPagesNav') %>
+
+        <div class="overall-div center">
+            <!-- flex-right inner-left -->
+            <div class="col-12 col-md-8">
+
+              <div class="container mt-3">
+                  <div class="card-width shadows bg-gray radius-three">
+                      <div class="card-body p-4">
+
+                          <div class="d-flex justify-content-between">
+                              <span class="d-flex gap-2">
+                                <i class="fa-solid fa-gift color-one mb-4 fs-4"></i>
+                                <p class="text-white mb-0 fs-6">Available To Generate</p>
+                              </span>
+                              <p class="text-white fs-5">0</p>
+                          </div>
+
+                          <div class="d-flex justify-content-between mt-4">
+                              <span class="d-flex gap-2">
+                                <i class="fa-solid fa-circle-check color-one mb-4 fs-4"></i>
+                                <p class="text-white mb-0 fs-6">Total Sold</p>
+                              </span>
+                              <p class="text-white fs-5">$<%= (getUsedCoupons.length * 5000) / 1000 %></p>
+                          </div>
+                      </div>
+                  </div>
+              </div><br>
+
+              <div class="card-width resize mb-3 mt-3">
+                <div class="row g-3">
+        
+                  <div class="col-6 col-sm-4 col-lg-6">
+                    <div class="bg-gray radius-two">
+                      <div class="card-body p-3">
+                        <h5 class="product-title d-block text-white">Active Codes</h5>
+                        <p class="fs-5"><%= getActiveCoupons.length %></p>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-6 col-sm-4 col-lg-6">
+                    <div class="bg-gray radius-two">
+                      <div class="card-body p-3">
+                        <h5 class="product-title d-block text-white">Used Codes</h5>
+                        <p class="fs-5"><%= getUsedCoupons.length %></p>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+   
+              <div class="mb-5">
+                <div class="">
+                  <div class="card-body">
+                    <div class="standard-tab">
+                      <ul class="nav rounded-lg mb-2 p-2 shadow-sm" id="affanTabs1" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="btn active" id="bootstrap-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="bootstrap" aria-selected="true">Active Codes</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                          <button class="btn" id="dark-tab" data-bs-toggle="tab" data-bs-target="#dark" type="button" role="tab" aria-controls="dark" aria-selected="false" tabindex="-1">Used Codes</button>
+                        </li>
+                      </ul>
+                    
+                      <div class="tab-content rounded-lg p-3" id="affanTabs1Content">
+                        <div class="tab-pane fade show active" id="bootstrap" role="tabpanel" aria-labelledby="bootstrap-tab">
+
+                          <div class="">
+                  <div class="">
+                    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                      <div class="dataTable-top d-flex justify-content-between">
+                        <div class="dataTable-dropdown">
+                          <label>
+                            <select class="dataTable-selector bg-three">
+                              <option value="10" selected>10</option>
+                              <option value="20">20</option>
+                              <option value="30">30</option>
+                              <option value="40">40</option>
+                              <option value="50">50</option>
+                            </select>
+                          </label>
+                        </div>
+                        <div class="dataTable-search">
+                          <input class="dataTable-input bg-three" placeholder="Search" type="text">
+                        </div>
+                      </div>
+                  <div class="dataTable-container">
+                    <table class="w-100 table" id="dataTable">
+                      <thead>
+                        <tr><th data-sortable="" style="width: 12.2727%;"><a href="#" class="dataTable-sorter color-one">SN</a></th>
+                          <th data-sortable="" style="width: 67.5%;"><a href="#" class="dataTable-sorter color-one">Code</a></th>
+                          <th data-sortable="" style="width: 20.2841%;"><a href="#" class="dataTable-sorter color-one">Value</a></th></tr>
+                      </thead>
+                      <tbody>
+                        
+                        <% for( let i = 0; i < getActiveCoupons.length; i++ ) { %>
+                          <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= getActiveCoupons[i].token %></td>
+                            <td>4,500</td>
+                          </tr>
+                        <% } %>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="dataTable-bottom d-flex justify-content-between">
+                    <div class="dataTable-info color-one" id="dataTableInfo">1 to 10 entries</div>
+                    <div class="dataTable-pagination">
+                      <ul class="pagination">
+                        <!-- Pagination links are generated dynamically -->
+                      </ul>
+                    </div>
+                  </div>
+
+                  </div>
+                  </div>
+                </div>
+
+
+                        </div>
+                      
+
+                      
+                        <div class="tab-pane fade" id="dark" role="tabpanel" aria-labelledby="dark-tab">
+
+                          <div class="">
+                <div class="">
+                  <div class="table-responsive">
+                    <table class="table table-responsive mb-0" id="dataTable">
+                      <thead>
+                        <tr>
+                          <th scope="col">SN</th>
+                          <th scope="col">Code</th>
+                          <th scope="col">Used_By</th>
+                          <th scope="col">Ref_By</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          
+                        <% for( let i = 0; i < getUsedCoupons.length; i++ ) { %>
+                          <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= getUsedCoupons[i].token %></td>
+                            <td>4,500</td>
+                          </tr>
+                        <% } %>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of table -->
+               
+            </div>
+            <!-- flex-right inner-left ends -->
+
+            <!-- flex-right inner-right -->
+            <div class="col-12 col-md-4 quarter sm" style="border-radius: 8px; margin-top: 15px;">
+                
+                <!-- <div class="container" id="admins">
+                  <div class=" card-bg-img hero-div mb-3">
+                    <div class="card-body direction-rtl p-4">
+                      <h6 class="text-white fw-bold">Contact Admins For Remittance</h6>
+                      
+                      <div class="container">
+                      
+                        <ul class="ps-0 chat-user-list">
+                        
+                          <li class="p-3 chat-unread">
+                            <a class="d-flex" href="https://wa.link/3058ut">
+                              <div class="chat-user-thumbnail me-3 shadow">
+                                <img class="img-circle" src="./Vendors Dashbaord_files/whatsapp.png" alt="">
+                                <span class="active-status"></span>
+                              </div>
+                              <div class="chat-user-info">
+                                <h6 class="text-truncate mb-0">Ajah's Media</h6>
+                                <div class="last-chat">
+                                  <p class="mb-0 text-truncate">Hello, Are you there?
+                                    <span class="badge rounded-pill primary">
+                                      <i class="fa-solid fa-circle-check text-white"></i>
+                                    </span>
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+
+                        </ul>
+
+                      </div>
+            
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Vendor Dashbaord</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="bottom-nav">
+      <ul>
+        <li class="active-item mb-3">
+          <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+        </li>
+        <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/dashboardPagesFooterSection') %>
+  
+
+
+<script src="/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Number of items per page
+  var itemsPerPage = 10;
+  // Selecting the table and tbody
+  var table = document.getElementById('dataTable');
+  var tbody = table.querySelector('tbody');
+  // Getting the total number of rows
+  var totalRows = tbody.getElementsByTagName('tr').length;
+  // Getting the total number of pages
+  var totalPages = Math.ceil(totalRows / itemsPerPage);
+  // Current page
+  var currentPage = 1;
+
+  // Function to show a specific page
+  function showPage(page) {
+      // Hide all rows
+      var rows = tbody.getElementsByTagName('tr');
+      for (var i = 0; i < rows.length; i++) {
+          rows[i].style.display = 'none';
+      }
+      // Calculate the starting and ending index of the rows to show
+      var startIndex = (page - 1) * itemsPerPage;
+      var endIndex = Math.min(startIndex + itemsPerPage, totalRows);
+      // Show the rows within the calculated range
+      for (var i = startIndex; i < endIndex; i++) {
+          rows[i].style.display = '';
+      }
+      // Update data table info
+      var info = document.getElementById('dataTableInfo');
+      info.textContent = startIndex + 1 + ' to ' + endIndex + ' entries';
+  }
+
+  // Show the first page by default
+  showPage(currentPage);
+
+  // Generate pagination links
+  var pagination = document.querySelector('.dataTable-pagination .pagination');
+  for (var i = 1; i <= totalPages; i++) {
+      var li = document.createElement('li');
+      li.className = 'page-item';
+      var link = document.createElement('a');
+      link.href = '#';
+      link.textContent = i;
+      link.className = 'page-link';
+      li.appendChild(link);
+      pagination.appendChild(li);
+  }
+
+  // Event listener for pagination links
+  pagination.addEventListener('click', function (e) {
+      e.preventDefault();
+      var targetPage = parseInt(e.target.textContent);
+      if (!isNaN(targetPage)) {
+          currentPage = targetPage;
+          // Show the corresponding page
+          showPage(currentPage);
+      }
+  });
+
+  // Event listener for row selector
+  var selector = document.querySelector('.dataTable-selector');
+  selector.addEventListener('change', function () {
+      itemsPerPage = parseInt(this.value);
+      // Recalculate total pages
+      totalPages = Math.ceil(totalRows / itemsPerPage);
+      // Regenerate pagination links
+      pagination.innerHTML = '';
+      for (var i = 1; i <= totalPages; i++) {
+          var li = document.createElement('li');
+          li.className = 'page-item';
+          var link = document.createElement('a');
+          link.href = '#';
+          link.textContent = i;
+          link.className = 'page-link';
+          li.appendChild(link);
+          pagination.appendChild(li);
+      }
+      // Show the first page after changing items per page
+      currentPage = 1;
+      showPage(currentPage);
+  });
+});
+</script>
+
+
+  <!-- All JavaScript Files -->
+  <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dark-rtl.js.download"></script>
+</body>
+</html>

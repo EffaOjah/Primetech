@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven - Website Settings</title>
+
+    <link rel="shortcut icon" type="image/png" href="img/ravenlogo.png">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        /* Styles for the container and the divs */
+        .container {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .active-div, .off-div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        .active-div {
+            background-color: #08c95f;
+            /* transform: translateX(0%); */
+        }
+        .off-div {
+            background-color: #da4b4b;
+            /* transform: translateX(100%); */
+        }
+        .toggle-off .active-div {
+            transform: translateX(-100%);
+        }
+        .toggle-off .off-div {
+            transform: translateX(0%);
+        }
+    </style>     
+    </head>
+<body>
+    <!-- page-wrapper start -->
+    <div class="page-wrapper default-version">
+        
+        <div class="sidebar bg--dark">
+            <button class="res-sidebar-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sidebar__inner">
+                <div class="sidebar__logo">
+                    <a href="/admin-dashboard" class="sidebar__main-logo"><img src="img/ravenlogo.png" alt="image"></a>
+                </div>
+        
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 86.75px);">
+                    <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper" style="overflow: scroll; width: auto; height: calc(100vh - 86.75px);">
+                    <ul class="sidebar__menu">
+                        <li class="sidebar-menu-item">
+                            <a href="/admin" class="nav-link ">
+                                <i class="menu-icon fa-solid fa-house"></i>                        
+                                <span class="menu-title">Dashboard</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin-withdrawal" class="nav-link ">
+                                <i class="menu-icon fa-solid fa-money-check-dollar"></i>
+                                <span class="menu-title">Auto Withdrawal</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item active">
+                            <a href="/website-settings" class="nav-link ">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title">Site Settings</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/generate-coupon-code" class="nav-link ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title">Generate Coupon</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin-codes" class="nav-link ">
+                                <i class="menu-icon fa-solid fa-gift"></i>
+                                <span class="menu-title">Admin Codes</span>
+                            </a>
+                        </li>
+        
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-users-gear"></i>
+                                <span class="menu-title">Manage Users</span>
+        
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/active-users" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Active Users</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item  ">
+                                        <a href="/active-vendors" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Vendors</span>
+                                            
+                                        </a>
+                                    </li>
+        
+                                    
+        
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/sendNotifications" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Notification to All</span>
+                                        </a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                        
+        
+                        <!--<li class="sidebar-menu-item sidebar-dropdown">-->
+                        <!--    <a href="javascript:void(0)" class="">-->
+                        <!--        <i class="menu-icon las la-file-invoice-dollar"></i>-->
+                        <!--        <span class="menu-title">Deposits</span>-->
+                        <!--        -->
+                        <!--    </a>-->
+                        <!--    <div class="sidebar-submenu  ">-->
+                        <!--        <ul>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/pending" class="nav-link">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title">Pending Deposits</span>-->
+                        <!--                    -->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/approved" class="nav-link">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title">Approved Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+        
+                        <!--            <li class="sidebar-menu-item  ">-->
+                        <!--                <a href="https://earnhive.net/admin/deposit/rejected" class="nav-link">-->
+                        <!--                    <i class="menu-icon las la-dot-circle"></i>-->
+                        <!--                    <span class="menu-title">Rejected Deposits</span>-->
+                        <!--                </a>-->
+                        <!--            </li>-->
+        
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</li>-->
+        
+                        <li class="sidebar-menu-item sidebar-dropdown">
+                            <a href="javascript:void(0)" class="">
+                                <i class="menu-icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="menu-title">Withdrawals </span>
+                                                    </a>
+                            <div class="sidebar-submenu  ">
+                                <ul>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-affiliate-withdrawals" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Affiliate Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+                                    
+                                   
+                                    
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/pending-earnings-withdrawals" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Earnings Withdrawals</span>
+        
+                                                                            </a>
+                                    </li>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="/approved-withdrawals" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Approved Withdrawals</span>
+                                        </a>
+                                    </li>
+        
+                                    <li class="sidebar-menu-item ">
+                                        <a href="Rejected Withdrawals.html" class="nav-link">
+                                            <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                            <span class="menu-title">Rejected Withdrawals</span>
+                                        </a>
+                                    </li>
+        
+        
+                                </ul>
+                            </div>
+                        </li>
+        
+                       
+        
+        
+                        
+        
+                        <li class="sidebar__menu-header">Settings</li>
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link">
+                                <i class="menu-icon fa-solid fa-gear"></i>
+                                <span class="menu-title">General Setting</span>
+                            </a>
+                        </li>
+        
+                       
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link">
+                                <i class="menu-icon fa-solid fa-user-tie"></i>
+                                <span class="menu-title">SEO Manager</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar__menu-header">Sponsored Posts</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/add-sponsored-post" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">Add Sponsored Post</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/all-sponsored-posts" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">All Sponsored Posts</span>
+                            </a>
+                        </li>
+                        
+        
+                       
+                        <li class="sidebar__menu-header">Products</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin-upload-product" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">Add Products</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/all-products" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">Product List</span>
+                            </a>
+                        </li>
+                        
+                        
+                          <li class="sidebar__menu-header">Courses</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/add-courses" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">Add Courses</span>
+                            </a>
+                        </li>
+                        
+                        <li class="sidebar-menu-item ">
+                            <a href="/all-courses" class="nav-link">
+                                <i class="menu-icon fa-regular fa-circle-dot"></i>
+                                <span class="menu-title">Course List</span>
+                            </a>
+                        </li>
+        
+                        <li class="sidebar__menu-header">Extra</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="#" class="nav-link">
+                                <i class="menu-icon fa-solid fa-wrench"></i>
+                                <span class="menu-title">Maintenance Mode</span>
+                            </a>
+                        </li>
+                        
+                        
+        
+                       
+                    </ul>
+                    <div class="text-center mb-3 text-uppercase">
+                        <span class="text--primary">Arvys Tech.</span>
+                        <span class="text--success">V1.0 </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar end -->
+        
+                <!-- navbar-wrapper start -->
+        <nav class="navbar-wrapper bg--dark">
+            <div class="navbar__left">
+                <button type="button" class="res-sidebar-open-btn me-3"><i class="fa-solid fa-bars"></i></button>
+                <form class="navbar-search">
+                    <input type="search" name="#0" class="navbar-search-field" id="searchInput" autocomplete="off" placeholder="Search here...">
+                    <i class="fa-solid fa-magnifying-glass"></i>         
+                    <ul class="search-list"></ul>
+                </form>
+            </div>
+            <div class="navbar__right">
+                <ul class="navbar__action-list">
+        
+                    <li class="dropdown">
+                        <button type="button" class="primary--layer" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-regular fa-bell text--primary  icon-left-right "></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu--md p-0 border-0 box--shadow1 dropdown-menu-right">
+                            <div class="dropdown-menu__header">
+                                <span class="caption">Notification</span>
+                                                            <p>You have 31214 unread notification</p>
+                                                    </div>
+                            
+                            <div class="dropdown-menu__footer">
+                                <a href="#" class="view-all-message">View all notification</a>
+                            </div>
+                        </div>
+                    </li>
+        
+        
+                    <li class="dropdown">
+                        <button type="button" class="" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-user">
+                                <span class="navbar-user__thumb"><img src="img/637884b0303b61668842672.jpeg" alt="image"></span>
+                                <span class="navbar-user__info">
+                                    <span class="navbar-user__name">geekdev</span>
+                                </span>
+                                <span class="icon"><i class="fa-solid fa-circle-chevron-down"></i></span>
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
+                            <a href="/admin-profile" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-regular fa-user"></i>
+                                <span class="dropdown-menu__caption">Profile</span>
+                            </a>
+        
+                            <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-solid fa-key"></i>                        
+                                <span class="dropdown-menu__caption">Password</span>
+                            </a>
+        
+                            <a href="#" class="dropdown-menu__item d-flex align-items-center px-3 py-2">
+                                <i class="dropdown-menu__icon fa-solid fa-arrow-right-from-bracket"></i>                        
+                                <span class="dropdown-menu__caption">Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- navbar-wrapper end -->
+
+        <div class="body-wrapper">
+            <div class="bodywrapper__inner">
+
+                <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
+    <h6 class="page-title">Website Settings</h6>
+    <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
+            </div>
+</div>
+
+                    <div class="row">
+        <div class="col-12">
+            <div class="row gy-4">
+
+
+            </div>
+
+            <!-- POPUP AD settings -->
+            <div class="card mt-30">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">POP UP AD</h5>
+                </div>
+                <div class="card-body">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <div class="form-group">
+                            <label for="image">Notification Image</label>
+                            <input class="form-control" type="file" name="image" accept="image/*" id="image">
+                            </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="title">Notification Title</label>
+                                    <input class="form-control" type="text" name="title" value="<%= data[0].notification_title %>" id="title">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="button">Button Name</label>
+                                    <input class="form-control" type="text" name="button" value="<%= data[0].button_name %>" id="button">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="link">Notification link</label>
+                                    <input class="form-control" type="text" name="link" value="<%= data[0].notification_link %>" id="link">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="details">Notification Details</label>
+                                    <textarea class="form-control" type="text" name="details" value="" id="details"><%= data[0].notification_details %></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="contest">Contest</label>
+                                    <input class="form-control" type="datetime-local" name="contest" value="<%= data[0].contest %>" id="contest">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn--primary w-100 h-45 fw-bold text-white">Submit                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Other setting -->
+            <div class="card mt-30">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">OTHER SETTINGS</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                       
+                        <div class="form-group col-xl-3 col-md- col-12">
+                            <label for="earnings">Earnings Withdrawal </label>
+                            <div class="container earnings">
+                                <div class="active-div activities-active-div">Active</div>
+                                <div class="off-div activities-off-div">Off</div>
+                            </div> 
+                        </div>
+                        
+                        <div class="form-group col-xl-3 col-md- col-12">
+                            <label for="earnings">Affiliate Withdrawal </label>
+                            <div class="container affiliate">
+                                <div class="active-div affiliate-active-div">Active</div>
+                                <div class="off-div affiliate-off-div">Off</div>
+                            </div> 
+                        </div>
+                        
+                        <div class="form-group col-xl-3 col-md- col-12">
+                            <label for="earnings">Activate Affiliate Contest </label>
+                            <div class="container">
+                                <div class="active-div">Active</div>
+                                <div class="off-div">Off</div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+            </div><!-- bodywrapper__inner end -->
+        </div><!-- body-wrapper end -->
+    </div>
+
+
+    <p id="affiliateStatus"><%= affiliate.active_status %></p>
+<p id="nonAffiliateStatus"><%= activities.active_status %></p>
+
+    
+
+<script>
+    // JavaScript code for toggling between the green and red divs
+    document.addEventListener("DOMContentLoaded", function() {
+        var containers = document.querySelectorAll('.container');
+
+        containers.forEach(function(container) {
+            var activeDiv = container.querySelector('.active-div');
+            var offDiv = container.querySelector('.off-div');
+
+            container.addEventListener('click', function() {
+                if (activeDiv.classList.contains('active')) {
+                    activeDiv.classList.remove('active');
+                    offDiv.classList.add('active');
+                    offDiv.style.transform = "translateX(0%)"; // Slide in from left
+                    activeDiv.style.transform = "translateX(100%)"; // Slide in from left
+                    if (container.classList.contains('earnings')) {
+                        console.log('Earnings Withdrawal turned off');
+
+                        //Send a request to turn off the activities withdrawal
+                        fetch("/offEarningsWithdrawal", { 
+                            method: "POST", 
+                            body: JSON.stringify({ 
+                                body: "OFF" 
+                            }), 
+                            headers: { 
+                                "Content-type": "application/json; charset=UTF-8"
+                            } 
+                        }) 
+                    } else if (container.classList.contains('affiliate')) {
+                        console.log('Affiliate Withdrawal turned off');
+
+                        //Send a request to turn off the affiliate withdrawal
+                        fetch("/offAffiliateWithdrawal", { 
+                            method: "POST", 
+                            body: JSON.stringify({ 
+                                body: "OFF" 
+                            }), 
+                            headers: { 
+                                "Content-type": "application/json; charset=UTF-8"
+                            } 
+                        }) 
+                    }
+                } else {
+                    activeDiv.classList.add('active');
+                    offDiv.classList.remove('active');
+                    offDiv.style.transform = "translateX(-100%)"; // Slide out to left
+                    activeDiv.style.transform = "translateX(0%)"; // Slide out to left
+                    if (container.classList.contains('earnings')) {
+                        console.log('Earnings Withdrawal turned on');
+                        //Send a request to turn on the activities withdrawal
+                        fetch("/onEarningsWithdrawal", { 
+                            method: "POST", 
+                            body: JSON.stringify({ 
+                                body: "ON" 
+                            }), 
+                            headers: { 
+                                "Content-type": "application/json; charset=UTF-8"
+                            } 
+                        }) 
+                    } else if (container.classList.contains('affiliate')) {
+                        console.log('Affiliate Withdrawal turned on');
+                        //Send a request to turn on the affiliate withdrawal
+                        fetch("/onAffiliateWithdrawal", { 
+                            method: "POST", 
+                            body: JSON.stringify({ 
+                                body: "ON" 
+                            }), 
+                            headers: { 
+                                "Content-type": "application/json; charset=UTF-8"
+                            } 
+                        }) 
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    const affiliateStatus = document.getElementById('affiliateStatus');
+    const activitiesStatus = document.getElementById('nonAffiliateStatus');
+
+    var affiliateActiveDiv = document.querySelector('.affiliate-active-div');
+    var affiliateOffDiv = document.querySelector('.affiliate-off-div');
+
+    var activitiesActiveDiv = document.querySelector('.activities-active-div');
+    var activitiesOffDiv = document.querySelector('.activities-off-div');
+
+    window.onload = ()=>{
+        setTimeout(()=>{
+            if (affiliateStatus.innerHTML == 'ON') {
+                affiliateActiveDiv.classList.add('active');
+                affiliateOffDiv.classList.remove('active');
+                affiliateOffDiv.style.transform = "translateX(-100%)"; // Slide out to left
+                affiliateActiveDiv.style.transform = "translateX(0%)"; // Slide out to left
+        }
+        if (activitiesStatus.innerHTML == 'ON') {
+                activitiesActiveDiv.classList.add('active');
+                activitiesOffDiv.classList.remove('active');
+                activitiesOffDiv.style.transform = "translateX(-100%)"; // Slide out to left
+                activitiesActiveDiv.style.transform = "translateX(0%)"; // Slide out to left
+        }
+        }, 10)
+    }
+</script>
+
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/app2.js"></script>
+
+
+
+
+</div>
+</body>
+</html>

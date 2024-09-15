@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://Prime-tech.net/user/withdraw-history -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime-tech">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Title -->
+  <title> Prime-tech || Withdrwals</title>
+  <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+   
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-one">
+
+<div class="d-flex">
+  
+    <div class="flex-right col-12 col-md-11">
+        <!-- Navbar -->
+      <%- include('./partials/dashboardPagesNav') %>
+  
+        <div class="overall-div center-div">
+          <div class="container mt-4">
+
+            <div class="px-3 pt-1">
+                <h6 class="fw-bold text-white">Withdrawals History</h6>
+            </div>
+            <% if (withdrawals.length < 1) { %>
+              <h2>No Withdrawals</h2>
+          <% } else{ %>
+            <% for( let i = 0; i < withdrawals.length; i++ ) { %>
+            <div class="container-fluid mt-4">
+                <div class="card-width radius-three bg-gray">
+                    <div class="card-body p-2">
+                        
+                      <!-- Single Notification -->
+                      <div class="alert" role="alert">
+                        <a href="#">
+                          <i class="fa-regular fa-credit-card mt-0 color-one"></i>
+                        </a>
+                        <div class="alert-text w-100">
+                          <a href="#">
+                            <h6 class="text-truncate text-white fw-bold">$<%= withdrawals[0] / 1000 %></h6>
+                            <p class="" style="font-size: 13px;">Withdrawn To: Palmpay | 9034537332 | Raymond Ama</p>
+                          </a>
+                          <div style="overflow: auto;" class="d-flex gap-1">
+                            <a class="btn btn-color text-white radius-two px-3 py-2 m-1" href="#" style="float: left;">Affiliate</a>                                
+                            <a class="btn m-1 text-white radius-two px-3 py-2" href="#" style="float: left;">Completed</a>
+                          </div>
+                        </div>
+                      </div>
+                          
+                    </div>
+                </div>
+            </div>
+            <br>
+                <% } %>
+          <%  } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Withdrawals History</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="bottom-nav">
+        <ul>
+          <li class="active-item mb-3">
+            <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+          </li>
+          <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<!-- Footer Nav -->
+<footer class="shadow dashboard-footer">
+  <div class="d-flex py-2 align-items-center justify-content-around bg-two content">
+    <a href="/user/dashboard">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="home-outline"></ion-icon>
+          <small>Dashboard</small>
+      </div>
+    </a>
+    <a href="/history/withdrawals">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="time"></ion-icon>
+          <small>History</small>
+      </div>
+    </a>
+    <a href="/place-withdrawal">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="card-outline"></ion-icon>
+          <small>Withdraw</small>
+      </div>
+    </a>
+    <button class="btn-more" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+      <div class="d-flex flex-column align-items-center">
+          <ion-icon name="ellipsis-horizontal"></ion-icon>
+          <small>More</small>
+      </div>
+    </button>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="/js/script.js"></script>
+
+  <!-- All JavaScript Files -->
+  <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dark-rtl.js.download"></script>
+
+</body>
+</html>

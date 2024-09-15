@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://Vertexx.net/user/setbank -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime-tech">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  
+  <!-- Title -->
+  <title> Prime-tech || Update Bank Details</title>
+  <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-one">
+
+  <div class="d-flex">
+
+  <div class="flex-right col-12 col-md-11">
+    <!-- Navbar -->
+    <%- include('./partials/dashboardPagesNav') %>
+
+      <div class="overall-div center-div">
+        <div class="container mt-3">
+    
+          <div class="user-data-card mt-4">
+            <div class="card-body p-4">
+            
+              <form action="/update-bank-details" method="post">
+                <div class="row g-3">
+                  <input type="hidden" name="userId" value="<%= user.user_id %>">
+                  <div class="col-md-12">
+                    <div class="form-floating mb-2">
+                      <!-- <label for="firstname">Bank</label> -->
+                      <select class="form-select" id="bank" placeholder="bank" type="text" value="" name="bank" required="">
+                        <option value="">Select Bank</option>
+                      <option value="MoMO MTN-1">MoMO MTN</option>
+                      <option value="VodaFone Ghana-2">VodaFone Ghana</option>
+                      <option value="Kuda MFB-090267">Kuda MFB</option>
+                      <option value="UBA-033">UBA</option>
+                      <option value="Access Bank-044">Access Bank</option>
+                      <option value="Access Mobile-100013">Access Mobile</option>
+                      <option value="Ecobank-050">Ecobank</option>
+                      <option value="Paycom (Opay)-305">Paycom (Opay)</option>
+                      <option value="Palmpay-100033">Palmpay</option>
+                      <option value="Stanbic IBTC-221">Stanbic IBTC</option>
+                      <option value="Paga-327">Paga</option>
+                      <option value="Polaris Bank-076">Polaris Bank</option>
+                      <option value="9 Payment Service-120001">9 Payment Service</option>
+                      <option value="Gomoney-100022">Gomoney</option>
+                      <option value="GTB-058">GTB</option>
+                      <option value="Wema Bank-035">Wema Bank</option>
+                      <option value="Zenith Bank-057">Zenith Bank</option>
+                      <option value="Sterling Bank-232">Sterling Bank</option>
+                      <option value="First bank-011">First bank</option>
+                      <option value="Fidelity bank-070">Fidelity bank</option>  
+                      <option value="FCMB-214">FCMB</option>  
+                      <option value="MOMO PSB-120003">MOMO PSB</option>  
+                      <option value="VFD Micro Finance Bank-090110">VFD Micro Finance Bank</option> 
+                      <option value="Union Bank PLC-032">Union Bank PLC</option>
+                      <option value="Unity Bank PLC-215">Unity Bank PLC</option>
+                      <option value="Suntrust Bank-100">Suntrust Bank</option>
+                      <option value="Standard Chaterted bank PLC-068">Standard Chaterted bank PLC</option>
+                      <option value="Jaiz Bank-301">Jaiz Bank</option>
+                      <option value="Keystone Bank-082">Keystone Bank</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="savedBank" placeholder="" autocomplete="off" value="<%= user.bank_name %>" readonly>
+                      <label>Saved Bank</label>
+                    </div>
+                  </div>
+      
+                  <!-- <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input class="form-control bg-three color-three" id="account_name" type="text" placeholder="account name" name="account_name">
+                      <label>Account Name</label>
+                    </div>
+                  </div> -->
+                  <div class="form-group text-start mb-1 position-relative">
+                    <div class="form-floating">
+                    <input class="form-control py-2" type="text" autocomplete="off" name="accountName" value="<%= user.account_name %>" required="">
+                    <label>Account Name</label>
+                  </div>
+                  </div>
+                  
+                  <!-- <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input class="form-control bg-three" id="account_number" type="text" placeholder="account number" name="account_number">
+                      <label>Account Number</label>
+                    </div>
+                  </div> -->
+                  <div class="form-group text-start mb-1 position-relative">
+                    <div class="form-floating">
+                    <input class="form-control py-2" type="number" autocomplete="off" name="accountNumber" value="<%= user.account_number %>" required="">
+                    <label>Account Number</label>
+                  </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button class="btn btn-color w-100 text-white radius-two shadow" type="submit">Update Now</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Bank </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="bottom-nav">
+      <ul>
+        <li class="active-item mb-3">
+          <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+        </li>
+        <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+<span id="alertColor" class="d-none"><%= locals.alertColor %></span>
+
+<%- include('./partials/dashboardPagesFooterSection') %>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!--build:js-->
+ <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+ <script src="js/jquery-3.6.0.min.js"></script>
+
+ <!-- Toastify JS -->
+ <script type="text/javascript" src="/js/toastify.js"></script>
+
+ 
+ <script src="js/active.js"></script>
+ <script src="/js/alert.js"></script>
+ <!--endbuild-->
+
+<script>
+  const alertMessage = document.getElementById('alertMessage');
+  const alertColor = document.getElementById('alertColor');
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      if (alertMessage.innerHTML) {
+          myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+      } else {
+        return;
+      }
+      
+    });
+</script>
+
+</body>
+</html>

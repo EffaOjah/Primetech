@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime-tech">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Title -->
+  <title> Prime-tech || Dashboard</title>
+  <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+  <style>
+    .hidden {
+        display: none;
+    }
+    .invisible {
+        visibility: hidden;
+    }
+    .eyes {
+        transform: translateY(7px);
+    }
+</style>
+</head>
+
+<body class="bg-one">
+
+  <div class="d-flex">
+
+    <div class="flex-right col-12 col-md-11">
+      <!-- Navbar -->
+      <%- include('./partials/dashboardPagesNav') %>
+          <!-- <div class="alert  alert-dismissible fade show custom-toast-1 toast-success home-page-toast" role="alert" data-bs-delay="7000" data-bs-autohide="true">
+            <div class="">
+                <p class="mb-1 text-white"><strong>Welcome to EarnHive!</strong></p>
+                <small class="d-block">
+                    Click the <strong>Add to Home Screen</strong> button &amp; enjoy it like an app.
+                </small>
+            </div>
+            <button class="btn btn-close btn-close-white" data-bs-dismiss="alert"></button>
+            <span class="toast-autohide-animation" style="animation-duration: 7000ms;"></span>
+          </div> -->
+
+        <div class="overall-div" style="display: flex;">
+            <!-- flex-right inner-left -->
+            <div class="col-12 col-md-8">
+                <div class="progress-mobile">
+                    <div class="d-flex gap-4 py-5" style="overflow-x: scroll;">
+                      <div class="col-10">
+                        <div class="ms-3 bg-gray py-3 shadows radius-three overflow-hidden">
+                          <h6 class="text-white px-4">Affiliate Balance</h6><br>
+                          <div class="d-flex align-items-center justify-content-between mt-3 mb-1">
+                            <div class="bg-three px-3 py-2">
+                                <h5 class="fs-1 color-four"><span class="totalAffiliateBalance spinner-border" aria-hidden="true"></span></h5>
+                            </div>
+                          </div>
+                          <p class="color-one me-3 convert">
+                            <i class="fa-solid fa-money-bill-transfer fs-4 color-one"></i> convert
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="ms-3 bg-gray py-3 shadows radius-three overflow-hidden">
+                          <h6 class="text-white px-4">Non Affiliate Balance</h6><br>
+                          <div class="d-flex align-items-center justify-content-between mt-3 mb-1">
+                            <div class="bg-three px-3 py-2">
+                                <h5 class="fs-1 color-four"><span class="totalNonAffiliateBalance spinner-border" aria-hidden="true"></span></h5>
+                            </div>
+                          </div>
+                          <p class="color-one me-3 convert">
+                            <i class="fa-solid fa-money-bill-transfer fs-4 color-one"></i> convert
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="ms-3 bg-gray py-3 shadows radius-three overflow-hidden">
+                          <h6 class="text-white px-4">Game Balance</h6><br>
+                          <div class="d-flex align-items-center justify-content-between mt-3 mb-1">
+                            <div class="bg-three px-3 py-2">
+                                <h5 class="fs-1 color-four"><span class="gameBalance spinner-border" aria-hidden="true"></span></h5>
+                            </div>
+                          </div>
+                          <p class="color-one me-3 convert">
+                            <i class="fa-solid fa-money-bill-transfer fs-4 color-one"></i> convert
+                          </p>
+                        </div>
+                      </div>
+                     
+                      <div class="col-10">
+                        <div class="me-3 bg-gray py-3 shadows radius-three overflow-hidden">
+                          <h6 class="text-white px-4">Total Withdrawal</h6><br>
+                          <div class="d-flex align-items-center justify-content-between mt-3 mb-1">
+                            <div class="bg-three px-3 py-2">
+                                <h5 class="fs-1 color-four">$<%= totalWithdrawal = null ? totalWithdrawal : '0' %></h5>
+                            </div>
+                            <p class="me-3">Affiliate</p>
+                          </div>
+                          <p class="color-one me-3 convert">
+                            <i class="fa-solid fa-money-bill-transfer fs-4 color-one"></i> convert
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <!-- <div class=""> -->
+                        <div class="col-3">
+                            <a href="/update/profile" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <i class="fa-solid fa-user fs-4 text-secondary"></i>
+                                </div>
+                                <p class="mb-0 color-four">Profile</p>
+                            </a>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="/place-withdrawal" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <img src="/img/withdraw.png" alt="">
+                                </div>
+                                <p class="mb-0 color-four">Withdraw</p>
+                            </a>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="/update/bank-details" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <img src="/img/bank.png" alt="">
+                                </div>
+                                <p class="mb-0 color-four">Bank</p>
+                            </a>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="/update/pin" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <i class="fa-solid fa-sliders fs-4 text-secondary"></i>
+                                </div>
+                                <p class="mb-0 color-four">Set Pin</p>
+                            </a>
+                        </div>
+                    <!-- </div> -->
+                  </div>
+                </div><br>
+
+                <!-- <div class="container">
+                  <div class="card shadow bg-gray" style="border-radius: 8px;">
+                    <div class="bg-img">
+                        <div class="card-body direction-rtl p-4">
+                            <h3 class="color-one">Total Withdrawal</h3>
+                            <p class="mb-4 text-black">₦450,000.00</p>
+                            <a class="btn btn-color text-white" href="Withdrwals history.html">History</a>
+                        </div>
+                    </div>
+                  </div>
+                </div><br> -->
+
+
+                <div class="container link-div">
+                    <div class="mb-5">
+                      <div class="card-body">
+                        <h6 class="color-one">Referral Link</h6>
+                        <p id="referral-link" class="mb-3 text-black">https://primetech.net.ng/user/register/?reference=<%= user.referral_code %></p>
+                        <a id="copy-link-btn" class="btn btn-color text-white radius-two px-3 py-2">Copy Link</a>
+              
+                        <script>
+                          document.getElementById("copy-link-btn").addEventListener("click", function() {
+                            // Get the text from the referral link element
+                            var referralLink = document.getElementById("referral-link").innerText;
+
+                            // Create a temporary input element to copy the text to the clipboard
+                            var tempInput = document.createElement("input");
+                            tempInput.value = referralLink;
+                            document.body.appendChild(tempInput);
+
+                            // Select the text in the input element
+                            tempInput.select();
+                            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+                            // Copy the text to the clipboard
+                            document.execCommand("copy");
+
+                            // Remove the temporary input element
+                            document.body.removeChild(tempInput);
+
+                            // Show the alert message
+                            alert("Referral Link Has Been Copied");
+                          });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- flex-right inner-left ends -->
+
+            <!-- flex-right inner-right -->
+            <!-- <div class="col-12 col-md-4 shadow dark-div quarter" style="border-radius: 8px; margin-top: 15px;">
+                <div class="top-products-area mt-3">
+                    <div class="container">
+                        <div class="row g-2 products-row">
+                            <div class="col-12 mb-2">
+                                <div class="primary single-product-card">
+                                    <div class="">
+                                        <h5 class="product-title d-block text-truncate">Game Balance</h5>
+                                        <p class="sale-price">₦76.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="primary single-product-card">
+                                    <div class="">
+                                        <h5 class="product-title d-block text-truncate">Direct Sales</h5>
+                                        <p class="sale-price">₦287,000.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="primary single-product-card">
+                                    <div class="">
+                                        <h5 class="product-title d-block text-truncate">In-Direct Sales</h5>
+                                        <p class="sale-price">₦375,800.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="primary single-product-card">
+                                    <div class="">
+                                        <h5 class="product-title d-block text-truncate">Prime-tech Cash</h5>
+                                        <p class="sale-price">H20,750.00 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+          
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Dashbaord</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="bottom-nav">
+          <ul>
+            <% if (user.is_a_vendor == true) { %>
+              <li class="active-item mb-3">
+                <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+              </li>
+            <% } %>
+            <li class="active-item mb-3">
+              <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+            </li>
+            <li class="active-item mb-3">
+              <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+            </li>
+            <li class="active-item mb-3">
+              <a href="/product/upload"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+            </li>
+            <li class="active-item mb-3">
+              <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="active-item mb-3">
+              <a href="/blog"><ion-icon name="blog-outline"></ion-icon><span>Daily Task</span></a>
+            </li>
+            <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  
+    <!-- Footer Nav -->
+    <footer class="shadow dashboard-footer">
+      <div class="d-flex py-2 align-items-center justify-content-around bg-two content">
+        <a href="/user/dashboard">
+          <div class="d-flex flex-column align-items-center">
+              <ion-icon name="home"></ion-icon>
+              <small>Dashboard</small>
+          </div>
+        </a>
+        <a href="/history/withdrawals">
+          <div class="d-flex flex-column align-items-center">
+              <ion-icon name="time-outline"></ion-icon>
+              <small>History</small>
+          </div>
+        </a>
+        <a href="/place-withdrawal">
+          <div class="d-flex flex-column align-items-center">
+              <ion-icon name="card-outline"></ion-icon>
+              <small>Withdraw</small>
+          </div>
+        </a>
+        <button class="btn-more" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+          <div class="d-flex flex-column align-items-center">
+              <ion-icon name="ellipsis-horizontal"></ion-icon>
+              <small>More</small>
+          </div>
+        </button>
+      </div>
+  </footer>
+  
+</div>
+
+
+
+
+
+
+  
+  <!-- Bootstrap Basic Modal -->
+<!-- <div class="modal fade" id="bootstrapBasicModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Start making it Big by Joining the Forum below</h6>
+        <button class="btn btn-close p-1 ms-auto" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/1702668915.jpg" alt="Image Description" class="img-fluid mb-3">
+        <p>Join our Unique ANALYSIS  channel for profitable Sure winning Bet 💥💥,  Sure Winning predicted matches Awaiting for you. 
+
+Click link to Channel Now and win all our daily sure Odd 
+👇🏽👇🏽👇</p>
+      </div>
+      <div class="modal-footer"> -->
+        <!--<button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Close</button>-->
+        <!-- <a class="btn btn-lg btn-success" type="button" href="https://t.me/+aa-ZaU_8kjM2Y2M0">Click here to Join now</a>
+      </div>
+    </div>
+  </div>
+</div> -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  // JavaScript to show the modal on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    var myModal = new bootstrap.Modal(document.getElementById('bootstrapBasicModal'));
+    myModal.show();
+  });
+</script>
+
+
+</div>
+<!-- flex-right end -->
+
+</div>
+<script src="/js/script.js"></script>
+<!-- <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("closebtn").style.display = "block";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("closebtn").style.display = "none";
+    }
+</script> -->
+
+  <!-- All JavaScript Files -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script to load user balances -->
+<script src="/js/loadBalances.js"></script>
+</body>
+</html>
