@@ -527,4 +527,13 @@ router.post('/add-post2', upload.single('image'), verifyToken.verifyAdminToken, 
     });
 });
 
+// Route to approve withdrawal
+router.get('/withdrawal/approve/:id', (req, res)=>{
+    let withdrawalId = req.params.id;
+    console.log('Withdarwal Id: ', withdrawalId);
+    
+    // Use id to fetch withdrawal details
+    
+});
+
 module.exports = router;

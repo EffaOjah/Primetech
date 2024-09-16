@@ -46,8 +46,8 @@
                         </a>
                         <div class="alert-text w-100">
                           <a href="#">
-                            <h6 class="text-truncate text-white fw-bold">$<%= withdrawals[0] / 1000 %></h6>
-                            <p class="" style="font-size: 13px;">Withdrawn To: Palmpay | 9034537332 | Raymond Ama</p>
+                            <h6 class="text-truncate text-white fw-bold">$<%= withdrawals[i].amount / 1000 %></h6>
+                            <p class="" style="font-size: 13px;">Withdrawn To: <%= withdrawals[i].bank %> | <%= withdrawals[i].account_number %> | <%= withdrawals[i].account_name %></p>
                           </a>
                           <div style="overflow: auto;" class="d-flex gap-1">
                             <a class="btn btn-color text-white radius-two px-3 py-2 m-1" href="#" style="float: left;">Affiliate</a>                                
@@ -138,7 +138,6 @@
 
   <!-- All JavaScript Files -->
   <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="dark-rtl.js.download"></script>
 
 </body>
 </html>

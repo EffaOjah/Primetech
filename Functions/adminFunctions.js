@@ -213,5 +213,11 @@ async function approvedWithdrawals() {
     });
 }
 
+// Function to get specificWithdrawal
+async function specificWithdrawal(params) {
+    return new Promise((resolve, reject) => {
+        connection.query('SLECT * FROM  token')
+    })
+}
 
 module.exports = {numberOfUsers, couponCodes, sumOfWithdrawals, allVendors, allCouponCodes, allUsers, withdrawals, sponsoredPosts, allProducts, allCourses, toggleVendorVerification, getNotification, getSettings, approvedWithdrawals};
