@@ -66,36 +66,19 @@
 
     <div class="container bg-light top py-5 radius-two">
         <div class="row g-1 gap-3 align-items-center justify-content-center">
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-2">
-                    <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">eoaflyehojre</p>
+            <% for( let i = 0; i < earners.length; i++ ) { %>
+                <div class="border round vendor px-4">
+                    <div class="gap-3 align-items-center mb-2">
+                        <div class="d-flex gap-4">
+                            <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
+                            <p class="fw-semibold fs-4"><%= earners[i].username %></p>
+                        </div>
+                        <div>
+                            <p class="text-color text-end">$<%= earners[i].balance / 1000 %></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-2">
-                    <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">eoaflyehojre</p>
-                </div>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-2">
-                    <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">lintedfab</p>
-                </div>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-2">
-                    <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">gloriousman</p>
-                </div>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-2">
-                    <img src="img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">freeman</p>
-                </div>
-            </div>
+            <% } %>
         </div>
     </div>
     <br>

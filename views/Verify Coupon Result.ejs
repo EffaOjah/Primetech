@@ -68,7 +68,11 @@
                     </tr>
                     <tr>
                         <th>Used By</th>
-                        <td><%= coupon[0].username == null ? 'NULL' : coupon[0].username %></td>
+                        <% if (info.length < 1) { %>
+                            <td>NULL</td>
+                        <% } else { %>
+                        <td><%= info[0].username == null ? 'NULL' : info[0].username %></td>
+                        <% } %>
                     </tr>
                     <tr>
                         <th>Date Used</th>
