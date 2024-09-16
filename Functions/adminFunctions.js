@@ -214,10 +214,43 @@ async function approvedWithdrawals() {
 }
 
 // Function to get specificWithdrawal
-async function specificWithdrawal(params) {
+async function specificWithdrawal(withdrawalId) {
     return new Promise((resolve, reject) => {
-        connection.query('SLECT * FROM  token')
-    })
+        connection.query('SELECT * FROM withdrawals WHERE withdrawal_id = ?', withdrawalId, (err, result)=>{
+            if (err) {
+                console.log(err);
+                reject(err);
+            } else{
+                console.log('withdrawal: ', result);
+                resolve(result[0]);
+            }
+        });
+    });
 }
 
-module.exports = {numberOfUsers, couponCodes, sumOfWithdrawals, allVendors, allCouponCodes, allUsers, withdrawals, sponsoredPosts, allProducts, allCourses, toggleVendorVerification, getNotification, getSettings, approvedWithdrawals};
+// Function to insert into approved_withdrawals table
+async function insertIntoApprovedWithdrawals(withdrawalId , userId, username, amount, withdrawalDate, withdrawalType, bank, accountNumber, accountName) {
+    return new Promise((resolve, reject) => {
+        connection.query('INSERT INTO approved_withdrawals (user_id, user, amount, withdrawal_date, withdrawal_type, bank, account_number, account_name) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [userId, username, amount, withdrawalDate, withdrawalType, bank, accountNumber, accountName], (err, result)=>{
+            if (err) {
+                console.log(err);
+                reject(err);
+            } else{
+                console.log('Successfully inserted into approved_withdrawals table');
+
+                // Update the status of the withdrawal in the withdrawals table
+                connection.query('UPDATE withdrawals SET status = ? WHERE withdrawal_id = ?', ['Approved', withdrawalId], (err)=>{
+                    if (err) {
+                        console.log(err);
+                        reject(err);
+                    } else{
+                        resolve(result);
+                    }
+                });
+            }
+        });
+    });
+}
+
+
+module.exports = {numberOfUsers, couponCodes, sumOfWithdrawals, allVendors, allCouponCodes, allUsers, withdrawals, sponsoredPosts, allProducts, allCourses, toggleVendorVerification, getNotification, getSettings, approvedWithdrawals, specificWithdrawal, insertIntoApprovedWithdrawals};

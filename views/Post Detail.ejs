@@ -80,21 +80,24 @@
                                             <h6 class="ms-2 mb-0">~ADMIN</h6>
                                         </div>
                                         <hr class="spacer mt-20 mb-20">
-                                        <p>Share Post</p>
                                         <div class="bog-author d-flex align-items-center justify-content-between">
-                                            <span class="date"><div>
-                                                <div id="share-icons" class="p-2">
-                                                    <a onclick="sharePost()">
-                                     <i class="fa-brands fa-square-whatsapp fs-1" style="color: #075e54"></i>
-                                     </a>
-                                 <a onclick="sharePost()" href="https://web.facebook.com/sharer/sharer.php?u=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
-                                <i class="fa-brands fa-facebook ms-3 fs-1" style="color: blue"></i>
-                            </a>
-
-                                                   <a onclick="sharePost()" href="https://twitter.com/intent/tweet?url=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
-                                                   <i class="fa-brands fa-square-twitter  ms-3  fs-1" style="color: #1DA1F2"></i>
-                                                   </a>
-                                                   </div>
+                                                <% if (post[0].post_type == 'post 1') { %>
+                                                    <p>Share Post</p>
+                                                    <div id="share-icons" class="p-2">
+                                                        <a onclick="sharePost()">
+                                                        <i class="fa-brands fa-square-whatsapp fs-1" style="color: #075e54"></i>
+                                                        </a>
+                                                                                     <a onclick="sharePost()" href="https://web.facebook.com/sharer/sharer.php?u=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
+                                                                                    <i class="fa-brands fa-facebook ms-3 fs-1" style="color: blue"></i>
+                                                                                </a>
+                                                    
+                                                                                                       <a onclick="sharePost()" href="https://twitter.com/intent/tweet?url=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
+                                                                                                       <i class="fa-brands fa-square-twitter  ms-3  fs-1" style="color: #1DA1F2"></i>
+                                                                                                       </a>
+                                                                                                       </div>
+                                                <% } else { %>
+                                                    <a href="<%= post[0].contact_link %>" class="btn btn-color text-white">Click to join</a>
+                                               <% } %>
                                                 </div></span>
                                         </div>
                                     </div>
