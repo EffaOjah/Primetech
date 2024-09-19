@@ -57,7 +57,7 @@ router.post('/couponcode/info', (req, res)=>{
 // Top earners route
 router.get('/top-earners', (req, res)=>{
     // Get the top earners
-    connection.query('SELECT u.username, t.user_id, SUM(t.amount) AS balance FROM affiliate_transactions t JOIN users u ON t.user_id = u.user_id GROUP BY t.user_id, u.username ORDER BY balance DESC', (err, result)=>{
+    connection.query(`SELECT u.username, SUM(t.amount) AS total_amount FROM affiliate_transactions t JOIN users u ON t.user_id = u.user_id WHERE t.type = 'CREDIT' GROUP BY u.username, u.user_id ORDER BY	total_amount DESC LIMIT 15`, (err, result)=>{
         if (err) {
             console.log(err);
         } else{
