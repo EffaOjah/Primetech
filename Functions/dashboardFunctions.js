@@ -272,4 +272,34 @@ async function getSinglePost(postId) {
     });
 }
 
-module.exports = {fetchUserByUsername, getReferrals, getTotalWithdrawal, createAffiliateBalanceView, getTotalAffiliateBalanceView, getTotalReferralBalanceView, createNonAffiliateBalanceView, getTotalNonAffiliateBalanceView, createGameBalanceView, getTotalGameBalanceView, insertIntoAffiliateTransactions, insertIntoNonAffiliateTransactions, insertIntoWithdrawals, getCoupons, insertIntoGameTransactions, updateGameColumn, getPosts, getSinglePost};
+// Function to update the has_shared_post colum
+async function updateHasSharedPostColumn(status, userId) {
+    return new Promise((resolve, reject) => {
+        connection.query('UPDATE users SET has_shared_post = ? WHERE user_id = ?', [status, userId], (err, result)=>{
+            if (err) {
+                console.log('Error updating the column: ', err);
+                reject(err);
+            } else{
+                console.log('Successfully updated the has_shared_post column');
+                resolve(result);
+            }
+        });
+    });
+}
+
+// Function to credit user
+async function creditUserForNonAffiliate(amount, transactionType, userId) {
+    return new Promise((resolve, reject) => {
+        connection.query('INSERT INTO non_affiliate_transactions (amount, transaction_type, user_id) VALUES (?, ?, ?)', [amount, transactionType, userId], (err, result)=>{
+            if (err) {
+                console.log('Error crediting the user: ', err);
+                reject(err);
+            } else{
+                console.log('Successfully credited the user');
+                resolve(result);
+            }
+        });
+    });
+}
+
+module.exports = {fetchUserByUsername, getReferrals, getTotalWithdrawal, createAffiliateBalanceView, getTotalAffiliateBalanceView, getTotalReferralBalanceView, createNonAffiliateBalanceView, getTotalNonAffiliateBalanceView, createGameBalanceView, getTotalGameBalanceView, insertIntoAffiliateTransactions, insertIntoNonAffiliateTransactions, insertIntoWithdrawals, getCoupons, insertIntoGameTransactions, updateGameColumn, getPosts, getSinglePost, updateHasSharedPostColumn, creditUserForNonAffiliate};

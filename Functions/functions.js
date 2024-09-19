@@ -56,8 +56,8 @@ async function checkEmail(email) {
             } else{
                 resolve(result);
             }
-        })
-    })
+        });
+    });
 }
 
 // Function to check if username has already been used
@@ -411,8 +411,39 @@ async function creditNewUser(userId){
             });
         }
     });
-    })
+    });
   }
 
+    // Function to get all vendors
+    async function getVendors() {
+        return new Promise((resolve, reject) => {
+            connection.query('SELECT * FROM users WHERE is_a_vendor = 1', (err, result)=>{
+                if (err) {
+                    console.log(err);
+                    reject(err);
+                } else{
+                    console.log('Vendors: ', result);
+                    resolve(result)
+                }
+            });
+        });
+    }   
 
-module.exports = {current_timestamp, validateEmail, generateReferralCode, separateId, checkEmail, checkUsername, checkCoupon, createUnreferredUser, createReferredUser, creditDirectReferral, creditFirstIndirectReferral, creditSecondIndirectReferral, checkDate, updateLastLoginDate, creditLoginBonus, createUserp2P, debitUser, creditNewUser};
+    // Function to shuffle array
+    function shuffleArray(array) {
+        // Create a copy of the array to avoid mutating the original array
+        let shuffledArray = array.slice();
+    
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            // Generate a random index
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+    
+            // Swap the current element with the random index
+            [shuffledArray[i], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[i]];
+        }
+    
+        return shuffledArray;
+    }
+
+
+module.exports = {current_timestamp, validateEmail, generateReferralCode, separateId, checkEmail, checkUsername, checkCoupon, createUnreferredUser, createReferredUser, creditDirectReferral, creditFirstIndirectReferral, creditSecondIndirectReferral, checkDate, updateLastLoginDate, creditLoginBonus, createUserp2P, debitUser, creditNewUser, getVendors, shuffleArray};

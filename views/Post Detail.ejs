@@ -84,7 +84,7 @@
                                                 <% if (post[0].post_type == 'post 1') { %>
                                                     <p>Share Post</p>
                                                     <div id="share-icons" class="p-2">
-                                                        <a onclick="sharePost()">
+                                                        <a onclick="sharePost()" href="https://wa.me/?text=https://primetech.net.ng/post/<%= post[0].post_id %>">
                                                         <i class="fa-brands fa-square-whatsapp fs-1" style="color: #075e54"></i>
                                                         </a>
                                                                                      <a onclick="sharePost()" href="https://web.facebook.com/sharer/sharer.php?u=https://https://primetech.net.ng/post/<%= post[0].post_id %>" target="_blank">
@@ -96,7 +96,7 @@
                                                                                                        </a>
                                                                                                        </div>
                                                 <% } else { %>
-                                                    <a href="<%= post[0].contact_link %>" class="btn btn-color text-white">Click to join</a>
+                                                    <a onclick="joinPlatform()" href="<%= post[0].contact_link %>" class="btn btn-color text-white">Click to join</a>
                                                <% } %>
                                                 </div></span>
                                         </div>

@@ -210,40 +210,54 @@ router.get('/post/:id', async(req, res)=>{
     res.render('Post Detail', {post});
 });
 
+// Route to share post
+router.get('/share-post', verifyToken.verifyPostToken, async(req, res)=>{
+    if (req.user) {
+        console.log('User is logged in');
+
+        // Get the user's details
+        const user = await dashboardFunctions.fetchUserByUsername(req.user.username);
+
+        // Check if the user has already been rewarded for the post
+        if (user[0].has_shared_post == 1) {
+            console.log('User has already been credited');
+        } else{
+            // Update the has_joined_platform
+            const updateColumn = await dashboardFunctions.updateHasSharedPostColumn(1, user[0].user_id);
+
+            // Credit the user
+            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(300, 'Post 1 bonus', user[0].user_id);
+        }
+        
+    } else{
+        console.log('User is not logged in and will not be credited');   
+    }
+});
+
 // Route to join platform
-router.get('/share-post', verifyToken.verifyToken, (req, res)=>{
-   console.log(verifyToken.verifyPostToken);
-   
-//     if (verifyToken.verifyPostToken == 1) {
-//       let user = req.user;
-//       console.log('You are logged in');
-//       res.json({message: 'Authenticated'})
-  
-//       // Check if the user has already been rewarded for the post
-//       if (user.has_joined_platform == 1) {
-//         console.log('Already creditted user for post');
-//       } else {
-//         // Update the has_joined_platform
-//         connection.query('UPDATE users SET has_joined_platform = 1 WHERE user_id = ?', user.user_id, (err)=>{
-//           if (err){
-//             console.log(err);
-//           } else{
-//             // Credit the user
-//             const amountAdded = 300;
-//             connection.query('UPDATE users SET total_activities_balance = total_activities_balance + ? WHERE user_id = ?', [amountAdded, user.user_id], (err)=>{
-//               if (err){
-//                 console.log(err);
-//               } else{
-//                 console.log('Successfully created the user for Raven post 1');
-//               }
-//             })
-//           }
-//         })
-//       }
-//   } else{ 
-//     console.log("You won't be rewarded, You are not logged in");
-//   }
-  });
+router.get('/join-platform', verifyToken.verifyPostToken, async(req, res)=>{
+    if (req.user) {
+        console.log('User is logged in');
+
+        // Get the user's details
+        const user = await dashboardFunctions.fetchUserByUsername(req.user.username);
+
+        // Check if the user has already been rewarded for the post
+        if (user[0].has_joined_platform == 1) {
+            console.log('User has already been credited');
+        } else{
+            // Update the has_joined_platform
+            const updateColumn = await dashboardFunctions.updateHasSharedPostColumn(1, user[0].user_id);
+
+            // Credit the user
+            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(400, 'Post 2 bonus', user[0].user_id);
+        }
+        
+    } else{
+        console.log('User is not logged in and will not be credited');   
+    }
+});
+
 
 // POST ROUTES
 // POST route to update bank details

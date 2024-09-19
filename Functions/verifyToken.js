@@ -45,21 +45,26 @@ const verifyAdminToken = (req, res, next) =>{
 
 
 // Middleware to verify JWT token for post
-const verifyPostToken = (req, res, next) =>{
-    const token = req.cookies.jwt;
+const verifyPostToken = (req, res, next) => {
+    const token = req.cookies.jwt; // Check for token in cookies
 
-    if (!token){
+    if (!token) {
         console.log('Token is not provided');
-        return 'Hellp';
+        req.user = null;  // Setting req.user to null for unauthenticated users
+        return next();  // Proceed to the next middleware/route handler
     }
 
-    jwt.verify(token, secret, (err, decoded)=>{
-        if(err){
+    jwt.verify(token, secret, (err, decoded) => {
+        if (err) {
             console.log('Invalid token');
-            next();
+            req.user = null;  // If token is invalid, treat as unauthenticated
+            return next();  // Proceed without throwing an error
         }
 
-        next();
+        // Valid token
+        req.user = decoded;  // Attach decoded user information to the request
+        console.log('Decoded JWT:', decoded);
+        next();  // Proceed to the next middleware/route handler
     });
 };
 module.exports = {verifyToken, verifyAdminToken, verifyPostToken};

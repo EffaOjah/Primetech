@@ -51,7 +51,7 @@
                           </a>
                           <div style="overflow: auto;" class="d-flex gap-1">
                             <a class="btn btn-color text-white radius-two px-3 py-2 m-1" href="#" style="float: left;">Affiliate</a>                                
-                            <a class="btn m-1 text-white radius-two px-3 py-2" href="#" style="float: left;">Completed</a>
+                            <a class="btn m-1 text-white radius-two px-3 py-2" href="#" style="float: left;"><%= withdrawals[i].status %></a>
                           </div>
                         </div>
                       </div>
@@ -91,7 +91,10 @@
           </li>
           <li class="active-item mb-3">
               <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
-            </li>
+          </li>
+          <li class="active-item mb-3">
+            <a href="/logout"><ion-icon name="exit-outline"></ion-icon><span>Log out</span></a>
+          </li>
         </ul>
       </div>
     </div>

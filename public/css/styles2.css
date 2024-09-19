@@ -172,7 +172,7 @@ border:0;
 border-radius:50%;
 }
 .vendor {
-width: fit-content;
+/* width: fit-content; */
 }
 .vendor img {
 width: 60px;

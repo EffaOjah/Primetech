@@ -4,14 +4,24 @@ const router = express.Router();
 
 const connection = require('../db/db');
 
+// Require the functions middleware
+const functions = require('../Functions/functions');
+
 // Home route
 router.get('/', (req, res)=>{
     res.render('Home');
 });
 
 // Buy coupon code route
-router.get('/couponcode/purchase', (req, res)=>{
-    res.render('Buy Coupon Code');
+router.get('/couponcode/purchase', async(req, res)=>{
+    // Get all vendors
+    const vendors = await functions.getVendors();
+
+    // Shuffle the arraynof vendors
+    const shuffledArray = functions.shuffleArray(vendors);
+    console.log('Shuffled Array: ', shuffledArray);
+    
+    res.render('Buy Coupon Code', {vendors: shuffledArray});
 });
 
 // Verify coupon code route

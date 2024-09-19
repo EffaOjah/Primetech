@@ -65,41 +65,15 @@
 
     <div class="container bg-light top py-5 radius-two">
         <div class="row g-1 gap-3 align-items-center justify-content-center">
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-5">
-                    <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">eoaflyehojre</p>
+            <% for( let i = 0; i < vendors.length; i++ ) { %>
+                <div class="border round vendor px-4">
+                    <div class="d-flex gap-3 align-items-center mb-5">
+                        <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
+                        <p class="fw-semibold fs-4"><%= vendors[i].username %></p>
+                    </div>
+                    <a href="<%= vendors[i].vendor_link %>" class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</a>
                 </div>
-                <button class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</button>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-5">
-                    <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">eoaflyehojre</p>
-                </div>
-                <button class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</button>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-5">
-                    <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">lintedfab</p>
-                </div>
-                <button class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</button>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-5">
-                    <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">gloriousman</p>
-                </div>
-                <button class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</button>
-            </div>
-            <div class="border round vendor px-4">
-                <div class="d-flex gap-3 align-items-center mb-5">
-                    <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
-                    <p class="fw-semibold fs-4">freeman</p>
-                </div>
-                <button class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</button>
-            </div>
+            <% } %>
         </div>
     </div>
     <br>
