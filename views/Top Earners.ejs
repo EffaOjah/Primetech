@@ -70,11 +70,11 @@
                 <div class="shadow bg-white round vendor px-4">
                     <div class="gap-3 align-items-center mb-2">
                         <div class="d-flex justify-content-between gap-4">
-                            <img src="img/img5.jfif" class="img-fluid rounded-circle" alt="">
+                            <img src="/uploads/profilePics/<%= !earners[i].display_image ? 'profile-icon.png' : earners[i].display_image %>" class="img-fluid rounded-circle" alt="">
                             <section>
                                 <p class="fw-semibold h1 fs-4 text-center"><%= earners[i].username %></p>
                                 <p class="fw-bolder h2 text-color text-center">₦ <%= earners[i].total_amount %></p>
-                            </section>
+                            </section>  
                             <img src="/img/greenRibbon.png" alt="">
                         </div>
                     </div>

@@ -197,7 +197,7 @@ router.get('/blog', async(req, res)=>{
     // Get all posts
     const posts = await dashboardFunctions.getPosts();
 
-    res.render('posts', {posts});
+    res.render('Sponsored Post', {posts});
 });
 
 // Route for post detail

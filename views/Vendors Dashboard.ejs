@@ -14,6 +14,10 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+   <!-- Toastify CSS -->
+   <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
   <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
 
@@ -76,6 +80,19 @@
                 </div>
               </div>
    
+              <!-- Upload profile pic section -->
+              <div class="card-width">
+                <div class="bg-gray radius-two p-3">
+                  <h6>Update Display Image</h6>
+                  <br>
+                  <form action="/upload-pic" method="post" enctype="multipart/form-data">
+                    <input class="form-control" type="file" name="image">
+                    <br>
+                    <button class="btn btn-color text-white">update</button>
+                  </form>
+                </div>
+              </div>
+
               <div class="mb-5">
                 <div class="">
                   <div class="card-body">
@@ -268,6 +285,8 @@
 
 <%- include('./partials/dashboardPagesFooterSection') %>
   
+<span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+<span id="alertColor" class="d-none"><%= locals.alertColor %></span>
 
 
 <script src="/js/script.js"></script>
@@ -364,8 +383,31 @@
 </script>
 
 
-  <!-- All JavaScript Files -->
-  <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="dark-rtl.js.download"></script>
+  <!--build:js-->
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+
+<!-- Toastify JS -->
+<script type="text/javascript" src="js/toastify.js"></script>
+
+
+<script src="/js/alert.js"></script>
+<!--endbuild-->
+
+<script>
+ const alertMessage = document.getElementById('alertMessage');
+ const alertColor = document.getElementById('alertColor');
+
+   document.addEventListener('DOMContentLoaded', ()=>{
+     if (alertMessage.innerHTML) {
+         myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+     } else {
+       return;
+     }
+     
+   });
+</script>
+
 </body>
 </html>
