@@ -289,7 +289,7 @@ async function updateHasSharedPostColumn(status, userId) {
 
 // Function to credit user
 async function creditUserForNonAffiliate(amount, transactionType, userId) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {   
         connection.query('INSERT INTO non_affiliate_transactions (amount, transaction_type, user_id) VALUES (?, ?, ?)', [amount, transactionType, userId], (err, result)=>{
             if (err) {
                 console.log('Error crediting the user: ', err);

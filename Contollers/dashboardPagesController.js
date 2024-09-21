@@ -193,11 +193,19 @@ router.get('/game', verifyToken.verifyToken, async(req, res)=>{
 });
 
 // Route for posts
-router.get('/blog', async(req, res)=>{
+router.get('/sponsored-posts', async(req, res)=>{
     // Get all posts
-    const posts = await dashboardFunctions.getPosts();
+    const getSinglePost = await dashboardFunctions.getSinglePost(2);
 
-    res.render('Sponsored Post', {posts});
+    res.render('Sponsored Post', {getSinglePost});
+});
+
+// Route for posts
+router.get('/advert-posts', async(req, res)=>{
+    // Get all posts
+    const getSinglePost = await dashboardFunctions.getSinglePost(1);
+
+    res.render('Advert Posts', {getSinglePost});
 });
 
 // Route for post detail
@@ -226,7 +234,7 @@ router.get('/share-post', verifyToken.verifyPostToken, async(req, res)=>{
             const updateColumn = await dashboardFunctions.updateHasSharedPostColumn(1, user[0].user_id);
 
             // Credit the user
-            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(300, 'Post 1 bonus', user[0].user_id);
+            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(400, 'Post 1 bonus', user[0].user_id);
         }
         
     } else{
@@ -250,7 +258,7 @@ router.get('/join-platform', verifyToken.verifyPostToken, async(req, res)=>{
             const updateColumn = await dashboardFunctions.updateHasSharedPostColumn(1, user[0].user_id);
 
             // Credit the user
-            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(400, 'Post 2 bonus', user[0].user_id);
+            const creditUser = await dashboardFunctions.creditUserForNonAffiliate(300, 'Post 2 bonus', user[0].user_id);
         }
         
     } else{
