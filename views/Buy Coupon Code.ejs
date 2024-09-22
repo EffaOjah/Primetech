@@ -68,7 +68,7 @@
             <% for( let i = 0; i < vendors.length; i++ ) { %>
                 <div class="border round vendor px-4">
                     <div class="d-flex gap-3 align-items-center mb-5">
-                        <img src="/img/profile-icon.png" class="img-fluid rounded-circle" alt="">
+                        <img src="/uploads/profilePics/<%= !vendors[i].display_image ? 'profile-icon.png' : vendors[i].display_image %>" class="img-fluid rounded-circle" alt="">
                         <p class="fw-semibold fs-4"><%= vendors[i].username %></p>
                     </div>
                     <a href="<%= vendors[i].vendor_link %>" class="btn btn-color radius-two text-white position-absolute bottom-0 end-0 me-4 mb-2">whatsapp</a>

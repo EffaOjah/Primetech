@@ -196,6 +196,7 @@ router.get('/website-settings', verifyToken.verifyAdminToken, async(req, res)=>{
 
     res.render('Website Settings', {getNotification, affiliateWithdrawalSetting, nonAffiliateWithdrawalSetting, gameWithdrawalSetting});
 });
+
 // Route to login as user
 router.get('/admin/user/:username', verifyToken.verifyAdminToken, async(req, res)=>{
     const username = req.params.username;
@@ -208,6 +209,23 @@ router.get('/admin/user/:username', verifyToken.verifyAdminToken, async(req, res
 
     res.redirect('/user/dashboard');
 });
+
+// Route to delete posts
+router.get('/delete-post', verifyToken.verifyAdminToken, (req, res)=>{
+    // Extract the 'id' from the URL parameters
+    const id = parseInt(req.query.id);
+    console.log('parsedInt: ', id);
+  
+    // delete the post
+    connection.query('DELETE FROM primetech_posts WHERE post_id = ?', id, (err)=>{
+      if (err){
+        console.log(err);
+      } else{
+        res.redirect('/admin/all-sponsored-post')
+      }
+    });
+  });
+
 
 
 // POST ROUTES
@@ -254,7 +272,7 @@ router.post('/popUpAd/update', upload.single('image'), verifyToken.verifyAdminTo
     });
 });
 
-// Route to turn on/off withdrawal (affiliate, non_affiliate, game, zen_social)
+// Route to turn on/off withdrawal (affiliate, non_affiliate, game)
 router.post('/update-withdrawal-status', verifyToken.verifyAdminToken, (req, res)=>{
     const {withdrawalType, status} = req.body;
     console.log(req.body);
@@ -487,18 +505,28 @@ router.post('/add-post1', upload.single('image'), verifyToken.verifyAdminToken, 
     }
 
     // Insert into the database
-    connection.query('UPDATE primetech_posts SET post_title = ?, post_description = ?, post_image = ? WHERE post_id = 1', [postTitle, description, req.file.filename], (err)=>{
+    connection.query('INSERT INTO primetech_posts (post_title, post_description, post_image, post_type) VALUES (?, ?, ?, ?)', [postTitle, description, req.file.filename, 1], (err)=>{
         if (err) {
             console.log('Error adding sponsored post 1: ', err);
             return res.render('Add Post1', {alertMessage: 'Error adding sponsored post 1', alertColor: 'red'});
         } else{
             console.log('Successfully added sponsored post 1');
-            return res.render('Add Post1', {alertMessage: 'Successfully added sponsored post 1', alertColor: 'green'});
+
+            // Update the has_shared_post column of the user
+            connection.query('UPDATE users SET has_shared_post = 0', (err)=>{
+                if (err) {
+                    console.log('Error updating has_shared_post column: ', err);
+                    return res.render('Add Post1', {alertMessage: 'Error adding sponsored post 1', alertColor: 'red'});
+                } else{
+                    console.log('Updated has_shared_post column');
+                    return res.render('Add Post1', {alertMessage: 'Successfully added sponsored post 1', alertColor: 'green'});
+                }
+            });
         }
     });
 });
 
-// Route to add sponsored post 1
+// Route to add sponsored post 2
 router.post('/add-post2', upload.single('image'), verifyToken.verifyAdminToken, (req, res)=>{
     const {postTitle, contactLink, description} = req.body;
     console.log(req.body);
@@ -516,13 +544,23 @@ router.post('/add-post2', upload.single('image'), verifyToken.verifyAdminToken, 
     }
 
     // Insert into the database
-    connection.query('UPDATE primetech_posts SET post_title = ?, contact_link = ?, post_description = ?, post_image = ? WHERE post_id = 2', [postTitle, contactLink, description, req.file.filename], (err)=>{
+    connection.query('INSERT INTO primetech_posts (post_title, contact_link, post_description, post_image, post_type) VALUES(?, ?, ?, ?, ?)', [postTitle, contactLink, description, req.file.filename, 2], (err)=>{
         if (err) {
             console.log('Error adding sponsored post 2: ', err);
             return res.render('Add Post2', {alertMessage: 'Error adding sponsored post 2', alertColor: 'red'});
         } else{
             console.log('Successfully added sponsored post 2');
-            return res.render('Add Post2', {alertMessage: 'Successfully added sponsored post 2', alertColor: 'green'});
+
+            // Update the has_shared_post column of the user
+            connection.query('UPDATE users SET has_joined_platform = 0', (err)=>{
+                if (err) {
+                    console.log('Error updating has_shared_post column: ', err);
+                    return res.render('Add Post2', {alertMessage: 'Error adding sponsored post 2', alertColor: 'red'});
+                } else{
+                    console.log('Updated has_shared_post column');
+                    return res.render('Add Post2', {alertMessage: 'Successfully added sponsored post 2', alertColor: 'green'});
+                }
+            });
         }
     });
 });
