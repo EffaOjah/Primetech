@@ -100,7 +100,10 @@ router.get('/place-withdrawal', verifyToken.verifyToken, async(req, res)=>{
     const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
     console.log('user: ', fetchUserByUsername[0]);
 
-    res.render('Submit Withdrawal', {user: fetchUserByUsername[0]});
+    // Get withdrawal settings
+    const getWithdrawalSettings = await dashboardFunctions.getSettings();
+
+    res.render('Submit Withdrawal', {user: fetchUserByUsername[0], settings: getWithdrawalSettings});
 });
 
 // Route to update bank details
@@ -198,6 +201,15 @@ router.get('/sponsored-posts', async(req, res)=>{
     const getSinglePost = await dashboardFunctions.getSinglePost(2);
 
     res.render('Sponsored Post', {getSinglePost});
+});
+
+// Route for tiktok pay
+router.get('/tiktok', verifyToken.verifyToken, async(req, res)=>{
+    // Get the user's details
+    const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
+    console.log('user: ', fetchUserByUsername[0]);
+
+    res.render('Tiktok pay', {user: fetchUserByUsername[0]});
 });
 
 // Route for posts
@@ -387,6 +399,9 @@ router.post('/update-pin', verifyToken.verifyToken, async(req, res)=>{
 
 // POST route to place withdrawal
 router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
+    // Get withdrawal settings
+    const getWithdrawalSettings = await dashboardFunctions.getSettings();
+
     // Get the user's details
     const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
 
@@ -419,13 +434,13 @@ router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
         // Check if user has updated his/her bank details
         if (!fetchUserByUsername[0].account_number || !fetchUserByUsername[0].account_name || !fetchUserByUsername[0].bank_name || !fetchUserByUsername[0].bank_code) {
             console.log('Please update bank details');
-            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Please update bank details', alertColor: 'red'});
+            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Please update bank details', alertColor: 'red', settings: getWithdrawalSettings});
         } 
     
         // Check if user has set pin
         if (!fetchUserByUsername[0].withdrawal_pin) {
             console.log('Please set pin');
-            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Please set pin', alertColor: 'red'});
+            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Please set pin', alertColor: 'red', settings: getWithdrawalSettings});
         }
 
         // Check withdrawal type
@@ -435,25 +450,25 @@ router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
             // Ensure that affiliate withdrawal is 8000 and above
             if ((amount * 1000) < 8000) {
                 console.log('Affiliate withdrawal must be $8 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Affiliate withdrawal must be $8 or above', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Affiliate withdrawal must be $8 or above', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Check if user balance is up to 8000
             if (getTotalAffiliateBalanceView[0].affiliateBalance < 8000) {
                 console.log('Your affiliate balance must be $8 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your affiliate balance must be $8 or above', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your affiliate balance must be $8 or above', alertColor: 'red', v});
             }
 
             // Ensure that withdrawal affiliate amount is not more than user's balance
             if ((amount * 1000) > getTotalAffiliateBalanceView[0].affiliateBalance) {
                 console.log('You cannot withdraw more than your affiliate balance');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'You cannot withdraw more than your affiliate balance', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'You cannot withdraw more than your affiliate balance', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Check if pin is correct
             if(md5(pin) !== fetchUserByUsername[0].withdrawal_pin){
                 console.log('Incorrect pin');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Incorrect pin', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Incorrect pin', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Insert into the affiliate transactions table
@@ -470,25 +485,25 @@ router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
             // Ensure that earnings withdrawal is 30000 and above
             if ((amount * 1000) < 30000) {
                 console.log('Earnings withdrawal must be $30 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Earnings withdrawal must be $30 or above', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Earnings withdrawal must be $30 or above', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Check if user balance is up to 30000
             if (getTotalNonAffiliateBalanceView[0].nonAffiliateBalance < 30000) {
                 console.log('Your earnings balance must be 30000 or above');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your earnings balance must be 30000 or above', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Your earnings balance must be 30000 or above', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Ensure that earnings affiliate amount is not more than user's balance
             if ((amount * 1000) > getTotalNonAffiliateBalanceView[0].nonAffiliateBalance) {
                 console.log('You cannot withdraw more than your affiliate balance');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'You cannot withdraw more than your affiliate balance', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'You cannot withdraw more than your affiliate balance', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Check if pin is correct
             if(md5(pin) !== fetchUserByUsername[0].withdrawal_pin){
                 console.log('Incorrect pin');
-                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Incorrect pin', alertColor: 'red'});
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Incorrect pin', alertColor: 'red', settings: getWithdrawalSettings});
             }
 
             // Insert into the affiliate transactions table
@@ -498,14 +513,38 @@ router.post('/submit-withdrawal', verifyToken.verifyToken, async(req, res)=>{
             const insertIntoWithdrawals = await dashboardFunctions.insertIntoWithdrawals(fetchUserByUsername[0].user_id, fetchUserByUsername[0].username, (amount * 1000), 'Non Affiliate Withdrawal', fetchUserByUsername[0].bank_name, fetchUserByUsername[0].account_number, fetchUserByUsername[0].account_name);
 
             console.log(`Successfully placed withdrawal of ${amount}ZP`);
-            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: `Successfully placed withdrawal of ${amount}ZP`, alertColor: 'green'});
-        } else{
+            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: `Successfully placed withdrawal of ${amount}ZP`, alertColor: 'green', settings: getWithdrawalSettings});
+        } else if (withdrawalType == 'game') {
+            // Perform operations for games withdrawal
+
+            // Ensure that games withdrawal is not more than the user's balance
+            if ((amount * 1000) > getTotalGameBalanceView[0].gameBalance) {
+                console.log('Insufficient game balance');
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Insufficient game balance', alertColor: 'red', settings: getWithdrawalSettings});
+            }
+
+            // Check if pin is correct
+            if(md5(pin) !== fetchUserByUsername[0].withdrawal_pin){
+                console.log('Incorrect pin');
+                return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Incorrect pin', alertColor: 'red', settings: getWithdrawalSettings});
+            }
+
+            // Insert into the affiliate transactions table
+            const insertIntoGameTransactions = await dashboardFunctions.insertIntoGameTransactions(fetchUserByUsername[0].user_id, `${-(amount)}`);
+
+            // Insert into the withdrawals table
+            const insertIntoWithdrawals = await dashboardFunctions.insertIntoWithdrawals(fetchUserByUsername[0].user_id, fetchUserByUsername[0].username, (amount * 1000), 'Game Withdrawal', fetchUserByUsername[0].bank_name, fetchUserByUsername[0].account_number, fetchUserByUsername[0].account_name);
+
+            console.log(`Successfully placed withdrawal of $${amount / 1000}`);
+            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: `Successfully placed withdrawal of $${amount / 1000}`, alertColor: 'green', settings: getWithdrawalSettings});
+        }
+        else{
             console.log('Invalid Withdrawal type');
-            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Invalid Withdrawal type', alertColor: 'red'});
+            return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Invalid Withdrawal type', alertColor: 'red', settings: getWithdrawalSettings});
         }
     } catch (error) {
         console.log('Internal server error: ', error);
-        return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Internal server error', alertColor: 'red'});
+        return res.render('Submit Withdrawal', {user: fetchUserByUsername[0], alertMessage: 'Internal server error', alertColor: 'red', settings: getWithdrawalSettings});
     }
 });
 
@@ -640,4 +679,21 @@ router.post('/credit-game-balance', async(req, res)=>{
     }
 });
 
+// POST route to update the tiktok details
+router.post('/tiktok', verifyToken.verifyPostToken, async(req, res)=>{
+     // Get the user's details
+     const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
+
+    const {fullName, username, profileLink} = req.body;
+
+    connection.query('UPDATE users SET tiktok_full_name = ?, tiktok_username = ?, tiktok_profile_link = ? WHERE user_id = ?', [fullName, username, profileLink, fetchUserByUsername[0].user_id], (err)=>{
+        if (err) {
+            console.log(err);
+            res.render('Tiktok pay', {user: fetchUserByUsername[0], alertMessage: 'Internal Server Error', alertColor: 'red'});
+        } else{
+            console.log('Successfully inserted into the database');
+            res.render('Tiktok pay', {user: fetchUserByUsername[0], alertMessage: 'Success', alertColor: 'green'});
+        }
+    })
+})
 module.exports = router;

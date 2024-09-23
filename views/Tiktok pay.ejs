@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://Vertexx.net/user/setbank -->
+<html lang="en" data-theme="light">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Prime-tech">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- Title -->
+        <title> Prime-tech || Tik Tok pay</title>
+        <link rel="shortcut icon" type="image/png" href="/img/logo (3).png">
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+        <!-- Toastify CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+
+  <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-one">
+
+  <div class="d-flex">
+
+  <div class="flex-right col-12 col-md-11">
+    <!-- Navbar -->
+    <%- include('./partials/dashboardPagesNav') %>
+
+      <div class="overall-div center-div">
+        <div class="container mt-3">
+    
+            <h3>Tiktok Pay</h3>
+          <div class="user-data-card mt-4">
+            <div class="card-body p-4">
+            
+              <form action="/tiktok" method="post">
+                <div class="row g-3">
+                  <input type="hidden" name="userId" value="<%= user.user_id %>">
+                  <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="<%= user.tiktok_full_name %>" autocomplete="off">
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="username" placeholder="Tiktok username" value="<%= user.tiktok_username %>"  autocomplete="off">
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12 mb-2">
+                    <div class="form-floating">
+                      <input type="url" class="form-control" name="profileLink" placeholder="Tiktok profile link(e.g https://...)" value="<%= user.tiktok_profile_link %>" autocomplete="off">
+                    </div>
+                  </div>
+      
+                  <div class="col-md-12">
+                    <button class="btn btn-color w-100 text-white radius-two shadow" type="submit">Submit</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="offcanvas offcanvas-bottom bg-one" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Bank </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="bottom-nav">
+      <ul>
+        <li class="active-item mb-3">
+          <a href="/vendor/dashboard"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/history/VTU"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU History</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/registration/p2p"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/downlines"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+        </li>
+        <li class="active-item mb-3">
+              <a href="/game"><ion-icon name="game-controller-outline"></ion-icon><span>Game</span></a>
+        </li>
+        <li class="active-item mb-3">
+          <a href="/logout"><ion-icon name="exit-outline"></ion-icon><span>Log out</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
+<span id="alertColor" class="d-none"><%= locals.alertColor %></span>
+
+<%- include('./partials/dashboardPagesFooterSection') %>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!--build:js-->
+ <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+ <script src="js/jquery-3.6.0.min.js"></script>
+
+ <!-- Toastify JS -->
+ <script type="text/javascript" src="/js/toastify.js"></script>
+
+ 
+ <script src="/js/alert.js"></script>
+ <!--endbuild-->
+
+<script>
+  const alertMessage = document.getElementById('alertMessage');
+  const alertColor = document.getElementById('alertColor');
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      if (alertMessage.innerHTML) {
+          myAlert(alertMessage.innerHTML, alertColor.innerHTML);
+      } else {
+        return;
+      }
+      
+    });
+</script>
+
+</body>
+</html>

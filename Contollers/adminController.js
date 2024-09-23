@@ -226,7 +226,20 @@ router.get('/delete-post', verifyToken.verifyAdminToken, (req, res)=>{
     });
   });
 
-
+// Route to get tiktok details
+router.get('/admin/tiktok-details', verifyToken.verifyAdminToken, (req, res)=>{
+    // Get all the user's tiktok details
+    connection.query('SELECT username, tiktok_full_name, tiktok_username, tiktok_profile_link FROM users', (err, result)=>{
+        if (err) {
+            console.log(err);
+        } else{
+            console.log('Tiktok details: ', result);
+            console.log(result.length);
+            
+            res.render('Tiktok details', {details: result});
+        }
+    });
+});
 
 // POST ROUTES
 // Route to update pop up ad

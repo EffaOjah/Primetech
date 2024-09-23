@@ -302,4 +302,20 @@ async function creditUserForNonAffiliate(amount, transactionType, userId) {
     });
 }
 
-module.exports = {fetchUserByUsername, getReferrals, getTotalWithdrawal, createAffiliateBalanceView, getTotalAffiliateBalanceView, getTotalReferralBalanceView, createNonAffiliateBalanceView, getTotalNonAffiliateBalanceView, createGameBalanceView, getTotalGameBalanceView, insertIntoAffiliateTransactions, insertIntoNonAffiliateTransactions, insertIntoWithdrawals, getCoupons, insertIntoGameTransactions, updateGameColumn, getPosts, getSinglePost, updateHasSharedPostColumn, creditUserForNonAffiliate};
+// Function to get settings
+async function getSettings() {
+    return new Promise((resolve, reject) => {
+        connection.query('SELECT * FROM withdrawalsettings', (err, result)=>{
+            if (err) {
+                console.log(err);
+                reject(err);
+            } else {
+                console.log('Settings: ', result);
+                resolve(result);
+            }
+        });
+    });
+}
+
+
+module.exports = {fetchUserByUsername, getReferrals, getTotalWithdrawal, createAffiliateBalanceView, getTotalAffiliateBalanceView, getTotalReferralBalanceView, createNonAffiliateBalanceView, getTotalNonAffiliateBalanceView, createGameBalanceView, getTotalGameBalanceView, insertIntoAffiliateTransactions, insertIntoNonAffiliateTransactions, insertIntoWithdrawals, getCoupons, insertIntoGameTransactions, updateGameColumn, getPosts, getSinglePost, updateHasSharedPostColumn, creditUserForNonAffiliate, getSettings};

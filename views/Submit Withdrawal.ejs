@@ -55,9 +55,9 @@
                             
                             <option id="affiliateBalance" value="affiliate"></option>
                             
-                            <option id="gameBalance" value="invest"></option>
+                            <option id="gameBalance" value="game"></option>
                             
-                            <option id="earningsBalance" value="amount"></option>
+                            <option id="earningsBalance" value="earnings"></option>
                           </select>
                         </div>  
                       </div>
@@ -148,6 +148,10 @@
 <span id="alertMessage" class="d-none"><%= locals.alertMessage %></span>
 <span id="alertColor" class="d-none"><%= locals.alertColor %></span>
 
+<span id="affiliateStatus" class="d-none"><%= locals.settings[0].active_status %></span>
+<span id="earningsStatus" class="d-none"><%= locals.settings[1].active_status %></span>
+<span id="gameStatus" class="d-none"><%= locals.settings[2].active_status %></span>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -196,12 +200,33 @@
        
        document.getElementById('affiliateBalance').innerHTML = `Affiliate Balance: $${(data.getTotalAffiliateBalanceView[0].affiliateBalance) / 1000}`;
 
+       if (document.getElementById('affiliateStatus').innerHTML == 'OFF') {
+        document.getElementById('affiliateBalance').setAttribute('disabled', 'disabled');
+        document.getElementById('affiliateBalance').style.background = 'grey';
+       } else{
+        // Do nothing
+      }
+
        document.getElementById('gameBalance').innerHTML = `Game Balance: $${(data.getTotalGameBalanceView
        [0].gameBalance) / 1000}`;
 
+       if (document.getElementById('gameStatus').innerHTML == 'OFF') {
+        document.getElementById('gameBalance').setAttribute('disabled', 'disabled');
+        document.getElementById('gameBalance').style.background = 'grey';
+       } else{
+        // Do nothing
+      }
+      
        document.getElementById('earningsBalance').innerHTML = `Activities Balance: $${(data.getTotalNonAffiliateBalanceView
        [0].nonAffiliateBalance) / 1000}`;
 
+       if (document.getElementById('earningsStatus').innerHTML == 'OFF') {
+        document.getElementById('earningsBalance').setAttribute('disabled', 'disabled');
+        document.getElementById('earningsBalance').style.background = 'grey';
+       } else{
+        // Do nothing
+      }
+      
       } catch (error) {
         console.log('Error while loading balances: ', error);
     }

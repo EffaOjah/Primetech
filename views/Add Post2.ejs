@@ -36,7 +36,7 @@
                 <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 86.75px);">
                     <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper" style="overflow: scroll; width: auto; height: calc(100vh - 86.75px);">
                     <ul class="sidebar__menu text-white">
-                        <li class="sidebar-menu-item active">
+                        <li class="sidebar-menu-item">
                             <a href="/admin/dashboard" class="nav-link text-white">
                                 <i class="menu-icon fa-solid fa-house"></i>                        
                                 <span class="menu-title text-white">Dashboard</span>
@@ -206,23 +206,34 @@
                             </a>
                         </li>
                          -->
-                        <li class="sidebar__menu-header">Sponsored Posts</li>
+                        <li class="sidebar__menu-header">Posts</li>
         
         
-                        <li class="sidebar-menu-item ">
+                        <li class="sidebar-menu-item active">
                             <a href="/admin/add-sponsored-post" class="nav-link text-white">
                                 <i class="menu-icon fa-regular fa-circle-dot"></i>
-                                <span class="menu-title text-white">Add Sponsored Post</span>
+                                <span class="menu-title text-white">Add Post</span>
                             </a>
                         </li>
                         
                         <li class="sidebar-menu-item ">
                             <a href="/admin/all-sponsored-post" class="nav-link text-white">
                                 <i class="menu-icon fa-regular fa-circle-dot"></i>
-                                <span class="menu-title text-white">All Sponsored Posts</span>
+                                <span class="menu-title text-white">All Posts</span>
                             </a>
                         </li>
                         
+                        <li class="sidebar__menu-header">Tiktok</li>
+        
+        
+                        <li class="sidebar-menu-item ">
+                            <a href="/admin/tiktok-details" class="nav-link text-white">
+                                <i class="menu-icon fa-solid fa-tiktok"></i>
+                                <span class="menu-title text-white">Tiktok Details</span>
+                            </a>
+                        </li>
+
+
                         <li class="sidebar__menu-header">Extra</li>
         
         
@@ -413,7 +424,7 @@
         <div class="body-wrapper">
             <div class="card mt-30">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Add Sponsored Post 2</h5>
+                    <h5 class="card-title mb-0">Add Sponsored Post</h5>
                 </div>
                 <div class="card-body">
                     <form action="/add-post2" method="POST" enctype="multipart/form-data">

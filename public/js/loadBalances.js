@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 
        affiliateBalanceSpan[0].classList.remove('spinner-border');
 
-       nonAffiliateBalanceSpan[0].innerHTML = `${data.getTotalNonAffiliateBalanceView[0].nonAffiliateBalance}PP`;
+       nonAffiliateBalanceSpan[0].innerHTML = `$${data.getTotalNonAffiliateBalanceView[0].nonAffiliateBalance / 1000}`;
 
        nonAffiliateBalanceSpan[0].classList.remove('spinner-border');
 
-       gameBalanceSpan[0].innerHTML = `$${data.getTotalGameBalanceView[0].gameBalance}GP`;
+       gameBalanceSpan[0].innerHTML = `$${data.getTotalGameBalanceView[0].gameBalance / 1000}`;
        gameBalanceSpan[0].classList.remove('spinner-border');
 
        directReferralBalance.innerHTML = `$${data.getTotalDirectReferralBalance[0].balance / 1000}`;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 
        indirectReferralBalance.classList.remove('spinner-border');
 
-       gameBalance.innerHTML = `${data.getTotalGameBalanceView[0].gameBalance}gp`;
+       gameBalance.innerHTML = `$${data.getTotalGameBalanceView[0].gameBalance / 1000}`;
 
        gameBalance.classList.remove('spinner-border');
     } catch (error) {
