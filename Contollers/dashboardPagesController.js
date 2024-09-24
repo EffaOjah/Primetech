@@ -192,7 +192,13 @@ router.get('/game', verifyToken.verifyToken, async(req, res)=>{
     const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
     console.log('user: ', fetchUserByUsername[0]);
 
-    res.render('game', {user: fetchUserByUsername[0]});
+    // Create the user's non affiliate balance view
+    const createNonAffiliateBalanceView = await dashboardFunctions.createNonAffiliateBalanceView(fetchUserByUsername[0].user_id);
+
+    // Get the user's total non affiliate balance view
+    const getTotalNonAffiliateBalanceView = await dashboardFunctions.getTotalNonAffiliateBalanceView(fetchUserByUsername[0].user_id);
+
+    res.render('game', {user: fetchUserByUsername[0], nonAffiliateBalance: getTotalNonAffiliateBalanceView[0].nonAffiliateBalance});
 });
 
 // Route for posts
@@ -635,9 +641,6 @@ router.post('/p2p', verifyToken.verifyToken, async (req, res)=>{
 
 // POST route to credit game balance
 router.post('/credit-game-balance', async(req, res)=>{
-    const {userId, amount} = req.body;
-    console.log('req.body: ', req.body);
-    
     const token = req.cookies.jwt;
 
     // Check if the user is logged in
@@ -656,13 +659,27 @@ router.post('/credit-game-balance', async(req, res)=>{
         console.log(decoded);
     });
 
+    
     // Get the user's details
     const fetchUserByUsername = await dashboardFunctions.fetchUserByUsername(req.user.username);
-    
-    // Check if the user has already played game
+
+    const {userId, amount} = req.body;
+    console.log('req.body: ', req.body);
+
+   try {
+     // Get the user's total non affiliate balance view
+     const getTotalNonAffiliateBalanceView = await dashboardFunctions.getTotalNonAffiliateBalanceView(fetchUserByUsername[0].user_id);
+
+     // Check if the user has already played game
     if (fetchUserByUsername[0].has_played_game == 1) {
         console.log('You have already played the game');
         return res.status(200).json({played: 'You have already played the game'});   
+    }
+
+    // Check if the user is eligible to play the game
+    if (getTotalNonAffiliateBalanceView[0].nonAffiliateBalance < 20000) {
+        console.log('You are not eligible to play this game');
+        return res.status(200).json({notEligible: 'You are not eligible to play this game'});   
     }
 
     try {
@@ -677,6 +694,12 @@ router.post('/credit-game-balance', async(req, res)=>{
         console.log(error);
         res.status(500).json({error: error});
     }
+
+   } catch (error) {
+    console.log(error);
+    
+    res.status(500).json({error: error});
+   }
 });
 
 // POST route to update the tiktok details

@@ -85,6 +85,9 @@
     <div id="result"></div>
   </div>
 
+
+  <span id="nonAffiliateBalance" class="d-none"><%= nonAffiliateBalance %></span>
+
   <!--build:js-->
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 
@@ -106,6 +109,7 @@
     const canvas = document.getElementById('wheelCanvas');
     const ctx = canvas.getContext('2d');
     const spinButton = document.getElementById('spinButton');
+    const nonAffiliateBalance = document.getElementById('nonAffiliateBalance');
     const result = document.getElementById('result');
 
     const foodItems = ["50", "100", "200", "300", "500", "0"];
@@ -173,8 +177,6 @@
         return spinWheel();
       }
 
-      result.textContent = `You got: ${foodItems[segmentIndex]}`;
-      alert(`You (<%= user.username %>) got: ${foodItems[segmentIndex]}`);
 
       fetch('/credit-game-balance', {
         method: 'POST',
@@ -188,6 +190,8 @@
         console.log(data);
         
         if(data.message){
+          result.textContent = `You got: ${foodItems[segmentIndex]}`;
+          alert(`You (<%= user.username %>) got: ${foodItems[segmentIndex]}`);
           myAlert(data.message, 'green');
         } else if(data.notLoggedIn){
           myAlert('Please Log in', 'red');
@@ -197,6 +201,8 @@
           }, 1000)
         } else if (data.played){
           myAlert('You have already played', 'red');
+        } else if (data.notEligible){
+          myAlert('You are not eligible to play the game', 'red');
         }
         else{
           console.log(data.error);
@@ -210,8 +216,18 @@
       });
     }
 
-    spinButton.addEventListener('click', spinWheel);
     drawWheel();
+
+    spinButton.addEventListener('click', ()=>{
+      // Check if user is eligible to play the game
+      if (nonAffiliateBalance.innerHTML < 20000) {
+          myAlert('You are not eligible to spin', 'red');
+      } else{
+       spinWheel();
+      }
+    });
+    
+    
   </script>
 </body>
 </html>
